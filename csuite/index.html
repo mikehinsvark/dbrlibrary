@@ -1,0 +1,1502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The C-Suite Outreach Playbook · DBR Library</title>
+<meta name="description" content="The DBR field guide to reaching and booking decision-makers. Every touch, every script, every tactic — engineered to get in front of the executives who matter and convert them into appointments.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600;700&family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   DBR Electric Blueprint — C-Suite Playbook
+   Deep navy · teal glow · gold · boxed layout
+   ============================================================ */
+
+:root {
+  --bg-deep:    oklch(0.045 0.015 240);
+  --bg-box:     oklch(0.08 0.02 240);
+  --bg-section: oklch(0.07 0.02 240);
+  --bg-card:    oklch(0.10 0.025 240 / 0.92);
+  --teal:       oklch(0.78 0.15 175);
+  --teal-muted: oklch(0.45 0.04 175);
+  --teal-glow:  oklch(0.78 0.15 175 / 0.22);
+  --teal-glow2: oklch(0.78 0.15 175 / 0.10);
+  --gold:       oklch(0.78 0.14 75);
+  --gold-glow:  oklch(0.78 0.14 75 / 0.22);
+  --purple:     oklch(0.62 0.18 280);
+  --blue:       oklch(0.68 0.15 240);
+  --green:      oklch(0.80 0.20 140);
+  --green-glow: oklch(0.80 0.20 140 / 0.22);
+  --coral:      oklch(0.68 0.18 25);
+  --coral-glow: oklch(0.68 0.18 25 / 0.22);
+  --white:      oklch(0.93 0.02 175);
+  --gray:       oklch(0.65 0.03 220);
+  --dim:        oklch(0.45 0.02 220);
+  --border:     oklch(0.78 0.15 175 / 0.14);
+  --font-head:  'Space Grotesk', sans-serif;
+  --font-body:  'DM Sans', sans-serif;
+  --font-label: 'Orbitron', sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  color: var(--white);
+  background: var(--bg-deep);
+  background-image:
+    linear-gradient(oklch(0.78 0.15 175 / 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, oklch(0.78 0.15 175 / 0.025) 1px, transparent 1px);
+  background-size: 44px 44px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4 { font-family: var(--font-head); line-height: 1.15; }
+
+.grad-teal {
+  background: linear-gradient(90deg, var(--teal), var(--blue));
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.grad-gold {
+  background: linear-gradient(90deg, var(--gold), oklch(0.88 0.12 75));
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ── BOXED LAYOUT ── */
+.site-shell {
+  max-width: 1100px;
+  margin: 0 auto;
+  background: var(--bg-box);
+  min-height: 100vh;
+  position: relative;
+}
+
+/* ── NAVBAR ── */
+.navbar {
+  position: sticky; top: 0; z-index: 200;
+  height: 56px;
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 16px; padding: 0 24px;
+  background: oklch(0.045 0.015 240 / 0.92);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--border);
+}
+.nav-brand { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+.nav-brand svg { width: 30px; height: 30px; flex-shrink: 0; }
+.nav-wordmark {
+  font-family: var(--font-head); font-weight: 800; font-size: 13px;
+  letter-spacing: .05em; color: var(--white); line-height: 1.1;
+}
+.nav-wordmark span { color: var(--teal); }
+.nav-links { display: flex; gap: 20px; align-items: center; }
+.nav-links a {
+  font-size: 12.5px; font-weight: 600; color: var(--gray);
+  text-decoration: none; transition: color .2s;
+  font-family: var(--font-head);
+}
+.nav-links a:hover { color: var(--teal); }
+.nav-cta {
+  background: linear-gradient(135deg, oklch(0.80 0.20 140), oklch(0.72 0.22 140));
+  color: oklch(0.12 0.04 140) !important;
+  font-family: var(--font-head); font-weight: 700;
+  font-size: 12.5px; padding: 9px 18px; border-radius: 10px;
+  box-shadow: 0 0 16px var(--green-glow); text-decoration: none;
+  transition: .2s;
+}
+.nav-cta:hover { transform: translateY(-1px); box-shadow: 0 0 28px var(--green-glow); }
+@media (max-width: 700px) { .nav-links a:not(.nav-cta) { display: none; } }
+
+/* ── PAGE CONTENT ── */
+.page {
+  padding: 0 28px 4rem;
+  max-width: 1100px;
+}
+
+/* ── HERO ── */
+.hero-wrap {
+  padding: 3.5rem 28px 2.5rem;
+  position: relative;
+  overflow: hidden;
+}
+.hero-wrap::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse 80% 60% at 50% 0%, oklch(0.78 0.15 175 / 0.08), transparent 70%);
+  pointer-events: none;
+}
+
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: oklch(0.78 0.15 175 / 0.07);
+  border: 1px solid oklch(0.78 0.15 175 / 0.35);
+  border-radius: 999px; padding: 6px 18px;
+  font-family: var(--font-label);
+  font-size: 10px; color: var(--teal);
+  letter-spacing: .18em; text-transform: uppercase;
+  margin-bottom: 1.4rem;
+  box-shadow: 0 0 20px var(--teal-glow2);
+}
+.hero-dot {
+  width: 7px; height: 7px; background: var(--green);
+  border-radius: 50%; box-shadow: 0 0 9px var(--green);
+  animation: pulse 2s infinite;
+}
+@keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.3} }
+
+.hero-split {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 32px;
+  align-items: start;
+}
+@media (max-width: 860px) { .hero-split { grid-template-columns: 1fr; } }
+
+.hero-left h1 {
+  font-size: clamp(32px, 4.2vw, 52px);
+  font-weight: 800; letter-spacing: -1.5px; line-height: 1.06;
+  margin-bottom: .85rem;
+}
+.hero-left h1 span {
+  background: linear-gradient(90deg, var(--teal), var(--blue));
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.hero-sub {
+  font-size: 16px; color: var(--gray);
+  max-width: 560px; margin-bottom: 1.8rem; line-height: 1.7;
+}
+.hero-buttons { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 2rem; }
+
+.btn-primary {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: var(--font-head); font-weight: 700; font-size: 14px;
+  padding: 13px 24px; border-radius: 11px;
+  background: linear-gradient(135deg, oklch(0.80 0.20 140), oklch(0.72 0.22 140));
+  color: oklch(0.12 0.04 140);
+  box-shadow: 0 0 22px var(--green-glow);
+  text-decoration: none; border: 0; cursor: pointer;
+  transition: .22s;
+}
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 0 36px var(--green-glow); }
+
+.btn-secondary {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: var(--font-head); font-weight: 700; font-size: 14px;
+  padding: 13px 24px; border-radius: 11px;
+  background: oklch(0.78 0.15 175 / 0.07);
+  color: var(--teal);
+  border: 1px solid oklch(0.78 0.15 175 / 0.4);
+  text-decoration: none; cursor: pointer;
+  transition: .22s;
+}
+.btn-secondary:hover { background: oklch(0.78 0.15 175 / 0.14); transform: translateY(-2px); }
+
+/* Hero chips */
+.hero-chips {
+  display: flex; gap: 10px; flex-wrap: wrap;
+}
+.hero-chip {
+  display: flex; align-items: center; gap: 10px;
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: 12px; padding: 10px 14px; transition: .25s;
+}
+.hero-chip:hover {
+  border-color: oklch(0.78 0.15 175 / 0.5);
+  box-shadow: 0 0 22px var(--teal-glow); transform: translateY(-2px);
+}
+.chip-icon { font-size: 18px; }
+.chip-num { font-family: var(--font-head); font-weight: 800; font-size: 20px; color: var(--teal); line-height: 1.05; }
+.chip-label { font-family: var(--font-label); font-size: 8px; letter-spacing: .12em; text-transform: uppercase; color: var(--dim); }
+
+/* ── COMMAND CENTER ── */
+.command-center {
+  position: relative;
+  background: linear-gradient(160deg, oklch(0.10 0.025 240 / 0.95), oklch(0.06 0.015 240 / 0.98));
+  border: 1px solid oklch(0.78 0.15 175 / 0.28);
+  border-radius: 20px; padding: 18px 18px 14px;
+  box-shadow: 0 0 60px oklch(0.78 0.15 175 / 0.10), inset 0 0 50px oklch(0.68 0.15 240 / 0.04);
+}
+.cc-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; }
+.cc-title { font-family: var(--font-label); font-size: 10px; letter-spacing: .18em; color: var(--white); }
+.cc-active {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-family: var(--font-label); font-size: 8px; color: var(--green); letter-spacing: .14em;
+}
+.cc-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--green); box-shadow: 0 0 7px var(--green); animation: pulse 2s infinite; }
+
+.cc-body { display: grid; grid-template-columns: 140px 1fr; gap: 14px; align-items: center; }
+@media (max-width: 480px) { .cc-body { grid-template-columns: 1fr; } }
+
+.cc-orb-wrap { position: relative; display: flex; align-items: center; justify-content: center; padding: 10px 0; }
+.cc-orb {
+  width: 148px; height: 148px; border-radius: 50%; position: relative;
+  display: flex; align-items: center; justify-content: center;
+  background: radial-gradient(circle at 50% 38%, oklch(0.78 0.15 175 / 0.30), oklch(0.68 0.15 240 / 0.12) 55%, transparent 75%);
+  border: 1px solid oklch(0.78 0.15 175 / 0.35);
+  box-shadow: 0 0 55px oklch(0.78 0.15 175 / 0.25), inset 0 0 40px oklch(0.78 0.15 175 / 0.14);
+  animation: orbfloat 5s ease-in-out infinite;
+}
+.cc-orb::before, .cc-orb::after {
+  content: ''; position: absolute; inset: 0; border-radius: 50%;
+  border: 1px solid oklch(0.78 0.15 175 / 0.4); animation: ring 3.2s ease-out infinite;
+}
+.cc-orb::after { animation-delay: 1.6s; }
+@keyframes ring { 0% { transform: scale(.85); opacity: .8; } 100% { transform: scale(1.45); opacity: 0; } }
+@keyframes orbfloat { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-7px); } }
+.cc-orb svg { width: 58px; height: 58px; filter: drop-shadow(0 0 12px oklch(0.78 0.15 175 / 0.9)); }
+.cc-orb-base {
+  position: absolute; bottom: -3px; left: 50%; transform: translateX(-50%);
+  width: 110px; height: 14px; border-radius: 50%;
+  background: radial-gradient(ellipse at center, oklch(0.78 0.15 175 / 0.30), transparent 70%);
+  filter: blur(2px);
+}
+
+.cc-agents { display: flex; flex-direction: column; gap: 8px; }
+.cc-agent {
+  display: flex; gap: 9px; align-items: flex-start;
+  background: oklch(0.045 0.015 240 / 0.65); border: 1px solid var(--border);
+  border-radius: 11px; padding: 9px 11px; transition: .25s;
+}
+.cc-agent .cc-ico { font-size: 15px; margin-top: 1px; }
+.cc-name { font-family: var(--font-head); font-weight: 700; font-size: 12px; color: var(--white); }
+.cc-desc { font-size: 10px; color: var(--gray); line-height: 1.4; }
+.cc-status { margin-top: 2px; font-family: var(--font-label); font-size: 7px; letter-spacing: .14em; }
+.cc-agent:hover { transform: translateX(3px); }
+.cc-agent.teal:hover { border-color: var(--teal); box-shadow: 0 0 22px var(--teal-glow); }
+.cc-agent.teal .cc-name { color: var(--teal); }
+.cc-agent.teal .cc-status { color: var(--teal); }
+.cc-agent.purple:hover { border-color: var(--purple); box-shadow: 0 0 22px oklch(0.62 0.18 280 / 0.35); }
+.cc-agent.purple .cc-name { color: var(--purple); }
+.cc-agent.purple .cc-status { color: var(--purple); }
+.cc-agent.gold:hover { border-color: var(--gold); box-shadow: 0 0 22px var(--gold-glow); }
+.cc-agent.gold .cc-name { color: var(--gold); }
+.cc-agent.gold .cc-status { color: var(--gold); }
+.cc-agent.green:hover { border-color: var(--green); box-shadow: 0 0 22px var(--green-glow); }
+.cc-agent.green .cc-name { color: var(--green); }
+.cc-agent.green .cc-status { color: var(--green); }
+
+.cc-foot {
+  display: flex; justify-content: space-between; align-items: center; gap: 10px;
+  margin-top: 12px; padding-top: 10px; border-top: 1px solid oklch(0.78 0.15 175 / 0.12);
+}
+.cc-sys { font-family: var(--font-label); font-size: 8px; color: var(--dim); letter-spacing: .14em; }
+.cc-sys b { color: var(--green); font-weight: 500; }
+
+/* ── PRINCIPLE CARDS ── */
+.principle-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px; margin: 1.2rem 0 2rem;
+}
+.principle-card {
+  text-align: center; padding: 1.4rem 1rem;
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: 16px; transition: .25s;
+}
+.principle-card:hover { transform: translateY(-5px); }
+.p-hex {
+  width: 52px; height: 46px; margin: 0 auto .7rem;
+  display: flex; align-items: center; justify-content: center; font-size: 22px;
+  clip-path: polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%);
+  background: oklch(0.78 0.15 175 / 0.10); transition: .25s;
+}
+.principle-card:hover .p-hex { transform: scale(1.1); }
+.p-name { font-family: var(--font-head); font-weight: 700; font-size: 14px; margin-bottom: 4px; }
+.p-desc { font-size: 11.5px; color: var(--gray); line-height: 1.5; }
+.principle-card.teal .p-name { color: var(--teal); }
+.principle-card.teal:hover { border-color: var(--teal); box-shadow: 0 0 40px var(--teal-glow); }
+.principle-card.purple .p-name { color: var(--purple); }
+.principle-card.purple .p-hex { background: oklch(0.62 0.18 280 / 0.12); }
+.principle-card.purple:hover { border-color: var(--purple); box-shadow: 0 0 40px oklch(0.62 0.18 280 / 0.35); }
+.principle-card.gold .p-name { color: var(--gold); }
+.principle-card.gold .p-hex { background: oklch(0.78 0.14 75 / 0.12); }
+.principle-card.gold:hover { border-color: var(--gold); box-shadow: 0 0 40px var(--gold-glow); }
+.principle-card.green .p-name { color: var(--green); }
+.principle-card.green .p-hex { background: oklch(0.80 0.20 140 / 0.10); }
+.principle-card.green:hover { border-color: var(--green); box-shadow: 0 0 40px var(--green-glow); }
+
+/* ── SECTION HEADERS ── */
+.sec-header {
+  display: flex; align-items: center; gap: 14px;
+  margin: 3rem 0 1.2rem; padding: 0 28px;
+}
+.sec-line { flex: 1; height: 1px; background: linear-gradient(90deg, oklch(0.78 0.15 175 / 0.3), transparent); }
+.sec-line.rev { background: linear-gradient(270deg, oklch(0.78 0.15 175 / 0.3), transparent); }
+.sec-label {
+  font-family: var(--font-label); font-size: 10.5px; font-weight: 500;
+  letter-spacing: .2em; text-transform: uppercase; color: var(--teal); white-space: nowrap;
+}
+
+.sec-content { padding: 0 28px; }
+.sec-title { font-size: 28px; font-weight: 800; margin-bottom: .6rem; }
+.sec-intro { color: var(--gray); max-width: 720px; margin: 0 0 1.4rem; font-size: 15px; line-height: 1.7; }
+
+/* ── GLOW CARD ── */
+.glow-card {
+  background: var(--bg-card); border-radius: 16px;
+  border: 1px solid var(--border); padding: 1.2rem 1.3rem;
+  transition: transform .22s, box-shadow .22s, border-color .22s;
+  backdrop-filter: blur(6px);
+}
+.glow-card:hover { transform: translateY(-4px); }
+.glow-card.teal { border-color: oklch(0.78 0.15 175 / 0.25); }
+.glow-card.teal:hover { box-shadow: 0 0 40px var(--teal-glow); border-color: oklch(0.78 0.15 175 / 0.55); }
+.glow-card.gold { border-color: oklch(0.78 0.14 75 / 0.3); }
+.glow-card.gold:hover { box-shadow: 0 0 40px var(--gold-glow); border-color: oklch(0.78 0.14 75 / 0.6); }
+.glow-card.purple { border-color: oklch(0.62 0.18 280 / 0.3); }
+.glow-card.purple:hover { box-shadow: 0 0 40px oklch(0.62 0.18 280 / 0.35); }
+.glow-card.blue { border-color: oklch(0.68 0.15 240 / 0.3); }
+.glow-card.blue:hover { box-shadow: 0 0 40px oklch(0.68 0.15 240 / 0.35); }
+.glow-card.green { border-color: oklch(0.80 0.20 140 / 0.25); }
+.glow-card.green:hover { box-shadow: 0 0 40px var(--green-glow); }
+.glow-card.coral { border-color: oklch(0.68 0.18 25 / 0.3); }
+.glow-card.coral:hover { box-shadow: 0 0 40px var(--coral-glow); }
+
+/* ── CAP CARDS ── */
+.caps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 14px; }
+.cap-card { display: flex; align-items: flex-start; gap: 14px; }
+.cap-icon { font-size: 24px; flex-shrink: 0; margin-top: 2px; }
+.cap-title { font-family: var(--font-head); font-size: 14.5px; font-weight: 700; margin-bottom: 4px; }
+.cap-desc { font-size: 13px; color: var(--gray); line-height: 1.55; }
+.teal .cap-title { color: var(--teal); }
+.gold .cap-title { color: var(--gold); }
+.green .cap-title { color: var(--green); }
+.coral .cap-title { color: var(--coral); }
+.purple .cap-title { color: var(--purple); }
+.blue .cap-title { color: var(--blue); }
+
+/* ── PROMPT BOX ── */
+.prompt-label {
+  font-family: var(--font-label); font-size: 9px; letter-spacing: .18em;
+  text-transform: uppercase; color: var(--teal); margin: 1.2rem 0 .5rem;
+}
+.prompt-box {
+  background: oklch(0.045 0.015 240 / 0.8);
+  border: 1px solid oklch(0.78 0.15 175 / 0.2);
+  border-left: 3px solid var(--teal);
+  border-radius: 0 12px 12px 0;
+  padding: 16px 20px; font-size: 14px; color: var(--white);
+  line-height: 1.7; margin-bottom: .8rem;
+}
+.prompt-box .said { color: var(--teal); font-weight: 600; }
+.prompt-box .stage {
+  display: block; color: var(--dim); font-family: var(--font-body);
+  font-size: 11.5px; font-style: italic; margin: 10px 0 2px;
+}
+
+/* ── CALLOUT ── */
+.callout {
+  border-left: 3px solid var(--gold);
+  background: oklch(0.78 0.14 75 / 0.05);
+  border-radius: 0 12px 12px 0; padding: 14px 18px; margin: 1.2rem 0;
+  font-size: 13.5px; color: var(--gray); line-height: 1.65;
+}
+.callout b { color: var(--gold); }
+.callout.cy { border-left-color: var(--teal); background: oklch(0.78 0.15 175 / 0.05); }
+.callout.cy b { color: var(--teal); }
+
+/* ── SAY THIS / NOT THAT ── */
+.swap-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 1rem 0 .4rem; }
+@media (max-width: 680px) { .swap-grid { grid-template-columns: 1fr; } }
+.swap-head {
+  font-family: var(--font-label); font-size: 9px; letter-spacing: .18em;
+  text-transform: uppercase; margin-bottom: 6px;
+}
+.swap-head.yes { color: var(--green); }
+.swap-head.no  { color: var(--coral); }
+.swap-card { padding: 1rem 1.15rem; font-size: 13.5px; line-height: 1.6; }
+.swap-card .why {
+  display: block; margin-top: 8px; font-size: 11.5px; color: var(--dim);
+  border-top: 1px solid var(--border); padding-top: 8px;
+}
+
+/* ── PRODUCTS GRID ── */
+.products-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }
+.prod-card { display: flex; flex-direction: column; gap: 10px; }
+.prod-top { display: flex; align-items: center; gap: 12px; margin-bottom: 4px; }
+.prod-icon-wrap {
+  width: 44px; height: 44px; border-radius: 12px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 22px; flex-shrink: 0;
+  background: oklch(0.78 0.15 175 / 0.08);
+  box-shadow: 0 0 14px var(--teal-glow2);
+}
+.gold .prod-icon-wrap { background: oklch(0.78 0.14 75 / 0.10); box-shadow: 0 0 14px var(--gold-glow); }
+.blue .prod-icon-wrap { background: oklch(0.68 0.15 240 / 0.10); }
+.purple .prod-icon-wrap { background: oklch(0.62 0.18 280 / 0.10); }
+.green .prod-icon-wrap { background: oklch(0.80 0.20 140 / 0.08); }
+.prod-name { font-family: var(--font-head); font-size: 17px; font-weight: 800; letter-spacing: -.01em; }
+.teal .prod-name { color: var(--teal); }
+.gold .prod-name { color: var(--gold); }
+.blue .prod-name { color: var(--blue); }
+.purple .prod-name { color: var(--purple); }
+.green .prod-name { color: var(--green); }
+.prod-tag { font-family: var(--font-label); font-size: 9px; color: var(--dim); text-transform: uppercase; letter-spacing: .14em; }
+.prod-desc { font-size: 13.5px; color: var(--gray); line-height: 1.6; }
+.prod-features { display: flex; flex-direction: column; gap: 7px; margin-top: 4px; }
+.prod-feat { display: flex; align-items: flex-start; gap: 10px; font-size: 13px; color: var(--white); }
+.feat-dot {
+  width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; margin-top: 7px;
+  background: var(--teal); box-shadow: 0 0 7px var(--teal);
+}
+.gold .feat-dot { background: var(--gold); box-shadow: 0 0 7px var(--gold); }
+.purple .feat-dot { background: var(--purple); box-shadow: 0 0 7px var(--purple); }
+.green .feat-dot { background: var(--green); box-shadow: 0 0 7px var(--green); }
+
+/* ── FLOW STEPS ── */
+.flow-steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(175px, 1fr)); gap: 12px; }
+.flow-step {
+  text-align: center; padding: 1.4rem 1rem;
+  background: var(--bg-card); border-radius: 16px; border: 1px solid var(--border);
+  transition: transform .22s, box-shadow .22s;
+}
+.flow-step:hover { transform: translateY(-4px); box-shadow: 0 0 32px var(--teal-glow2); }
+.flow-num {
+  font-family: var(--font-label); font-size: 24px; font-weight: 700;
+  margin-bottom: .5rem; color: var(--teal); text-shadow: 0 0 18px var(--teal-glow);
+}
+.flow-step:nth-child(2) .flow-num { color: var(--blue); text-shadow: 0 0 18px oklch(0.68 0.15 240 / 0.3); }
+.flow-step:nth-child(3) .flow-num { color: var(--green); text-shadow: 0 0 18px var(--green-glow); }
+.flow-step:nth-child(4) .flow-num { color: var(--gold); text-shadow: 0 0 18px var(--gold-glow); }
+.flow-title { font-family: var(--font-head); font-weight: 700; font-size: 15px; margin-bottom: 5px; }
+.flow-hint { font-size: 12px; color: var(--gray); }
+
+/* ── NUMBERED STEPS ── */
+.steps-list { display: flex; flex-direction: column; gap: 10px; }
+.step-row {
+  display: flex; align-items: flex-start; gap: 16px;
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: 14px; padding: 1rem 1.2rem;
+  transition: border-color .2s, box-shadow .2s;
+}
+.step-row:hover { border-color: oklch(0.78 0.15 175 / 0.4); box-shadow: 0 0 24px var(--teal-glow2); }
+.step-num {
+  font-family: var(--font-label);
+  width: 36px; height: 36px; border-radius: 10px; flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+  background: oklch(0.78 0.15 175 / 0.08); border: 1px solid oklch(0.78 0.15 175 / 0.3);
+  color: var(--teal); font-weight: 700; font-size: 14px;
+  box-shadow: 0 0 12px var(--teal-glow2);
+}
+.step-title { font-family: var(--font-head); font-weight: 700; font-size: 15px; margin-bottom: 3px; }
+.step-desc { font-size: 13px; color: var(--gray); line-height: 1.6; }
+.step-desc a { color: var(--teal); }
+
+/* ── USE-CASE GRID ── */
+.use-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; }
+.use-card { text-align: center; padding: 1.2rem 1rem; }
+.use-emoji { font-size: 28px; margin-bottom: .5rem; }
+.use-title { font-family: var(--font-head); font-weight: 700; font-size: 13.5px; margin-bottom: 4px; }
+.use-desc { font-size: 11.5px; color: var(--gray); line-height: 1.5; }
+.teal .use-title { color: var(--teal); }
+.gold .use-title { color: var(--gold); }
+.purple .use-title { color: var(--purple); }
+.blue .use-title { color: var(--blue); }
+
+/* ── TABLE ── */
+.tbl-wrap { overflow-x: auto; margin: 1rem 0 1.4rem; }
+table.dbr {
+  width: 100%; border-collapse: collapse; font-size: 13px; min-width: 520px;
+  background: var(--bg-card); border-radius: 14px; overflow: hidden;
+}
+table.dbr th {
+  font-family: var(--font-label); font-size: 9px; letter-spacing: .14em;
+  text-transform: uppercase; color: var(--teal); text-align: left;
+  padding: 12px 14px; border-bottom: 1px solid oklch(0.78 0.15 175 / 0.25);
+  background: oklch(0.78 0.15 175 / 0.05);
+}
+table.dbr td {
+  padding: 10px 14px; border-bottom: 1px solid var(--border);
+  color: var(--gray); vertical-align: top;
+}
+table.dbr td:first-child { color: var(--white); font-weight: 600; white-space: nowrap; }
+table.dbr tr:last-child td { border-bottom: none; }
+table.dbr tr:hover td { background: oklch(0.78 0.15 175 / 0.03); }
+
+/* ── OBJECTION CARDS ── */
+.obj-q {
+  font-family: var(--font-head); font-weight: 700; font-size: 13.5px;
+  color: var(--white); margin-bottom: 8px;
+}
+.obj-q::before { content: '"'; color: var(--coral); }
+.obj-q::after  { content: '"'; color: var(--coral); }
+.obj-a { font-size: 13px; color: var(--gray); line-height: 1.6; }
+.obj-a b { color: var(--teal); font-weight: 600; }
+
+/* ── COUNTER ROW ── */
+.counter-row {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 14px; margin: 1.4rem 0;
+}
+.counter-box {
+  text-align: center; padding: 1.4rem 1rem;
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: 16px; transition: .25s;
+}
+.counter-box:hover { border-color: oklch(0.78 0.15 175 / 0.4); box-shadow: 0 0 32px var(--teal-glow2); }
+.counter-num {
+  font-family: var(--font-head); font-size: 44px; font-weight: 800;
+  color: var(--teal); text-shadow: 0 0 24px var(--teal-glow); line-height: 1; margin-bottom: 6px;
+}
+.counter-label { font-family: var(--font-label); font-size: 9px; color: var(--dim); text-transform: uppercase; letter-spacing: .14em; }
+
+/* ── PILL ROW ── */
+.pill-row { display: flex; flex-wrap: wrap; gap: 8px; margin: .8rem 0 1.4rem; }
+.pill {
+  font-family: var(--font-label); font-size: 8.5px; letter-spacing: .14em;
+  text-transform: uppercase; color: var(--teal);
+  border: 1px solid oklch(0.78 0.15 175 / 0.3); background: oklch(0.78 0.15 175 / 0.05);
+  border-radius: 999px; padding: 6px 12px;
+}
+.pill.gold  { color: var(--gold);  border-color: oklch(0.78 0.14 75 / 0.35);  background: oklch(0.78 0.14 75 / 0.05); }
+.pill.green { color: var(--green); border-color: oklch(0.80 0.20 140 / 0.3);  background: oklch(0.80 0.20 140 / 0.05); }
+.pill.coral { color: var(--coral); border-color: oklch(0.68 0.18 25 / 0.35);  background: oklch(0.68 0.18 25 / 0.05); }
+
+/* ── CTA BOX ── */
+.cta-box {
+  margin: 3rem 28px 2rem;
+  text-align: center; padding: 3rem 2rem;
+  background: linear-gradient(160deg, oklch(0.10 0.025 240 / 0.95), oklch(0.06 0.015 240 / 0.98));
+  border: 1px solid oklch(0.78 0.15 175 / 0.28);
+  border-radius: 24px;
+  box-shadow: 0 0 80px oklch(0.78 0.15 175 / 0.10);
+  position: relative; overflow: hidden;
+}
+.cta-box::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse 70% 50% at 50% 0%, oklch(0.78 0.15 175 / 0.08), transparent 70%);
+  pointer-events: none;
+}
+.cta-icon { font-size: 44px; margin-bottom: 1rem; }
+.cta-title {
+  font-family: var(--font-head); font-size: clamp(26px, 3.5vw, 38px);
+  font-weight: 800; margin-bottom: .7rem;
+}
+.cta-title span { color: var(--teal); }
+.cta-sub { font-size: 15px; color: var(--gray); max-width: 560px; margin: 0 auto 1.8rem; line-height: 1.7; }
+.cta-buttons { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-bottom: 1.2rem; }
+.cta-fine { font-family: var(--font-label); font-size: 9px; color: var(--dim); letter-spacing: .14em; text-transform: uppercase; }
+
+/* ── DISCLAIMER ── */
+.disclaimer {
+  margin: 2rem 28px;
+  font-size: 11px; color: var(--dim); line-height: 1.7;
+  border-top: 1px solid var(--border); padding-top: 1.5rem;
+}
+
+/* ── FOOTER ── */
+.site-footer {
+  background: oklch(0.045 0.015 240 / 0.95);
+  border-top: 1px solid var(--border);
+  padding: 2.5rem 28px 1.8rem;
+}
+.footer-grid {
+  display: grid; grid-template-columns: 1fr auto auto;
+  gap: 2rem; margin-bottom: 1.8rem;
+}
+@media (max-width: 600px) { .footer-grid { grid-template-columns: 1fr; } }
+.footer-brand { display: flex; align-items: center; gap: 10px; margin-bottom: .8rem; }
+.footer-brand svg { width: 28px; height: 28px; }
+.footer-tagline { font-size: 12.5px; color: var(--dim); line-height: 1.6; max-width: 280px; }
+.footer-col h4 { font-family: var(--font-label); font-size: 9px; letter-spacing: .18em; text-transform: uppercase; color: var(--teal); margin-bottom: .8rem; }
+.footer-col a { display: block; font-size: 13px; color: var(--gray); text-decoration: none; margin-bottom: .4rem; transition: color .2s; }
+.footer-col a:hover { color: var(--teal); }
+.footer-legal { font-size: 11.5px; color: var(--dim); border-top: 1px solid var(--border); padding-top: 1.2rem; line-height: 1.7; }
+.footer-legal a { color: var(--teal); text-decoration: none; }
+.footer-dbr { font-family: var(--font-label); font-size: 10px; letter-spacing: .14em; color: var(--teal); margin-right: 6px; }
+
+/* ── BACK TO TOP ── */
+.to-top {
+  position: fixed; bottom: 24px; right: 24px; z-index: 300;
+  width: 42px; height: 42px; border-radius: 12px;
+  display: flex; align-items: center; justify-content: center;
+  background: oklch(0.10 0.025 240 / 0.92); border: 1px solid var(--border);
+  color: var(--teal); font-size: 18px; text-decoration: none;
+  box-shadow: 0 0 20px var(--teal-glow2);
+  transition: .25s; backdrop-filter: blur(8px);
+  opacity: 0; pointer-events: none;
+}
+.to-top.visible { opacity: 1; pointer-events: auto; }
+.to-top:hover { transform: translateY(-3px); box-shadow: 0 0 32px var(--teal-glow); }
+
+/* ── SCROLL REVEAL ── */
+.reveal { opacity: 0; transform: translateY(20px); transition: opacity .5s, transform .5s; }
+.reveal.visible { opacity: 1; transform: none; }
+
+/* ── SCROLL NAV (right side dots) ── */
+.scroll-nav {
+  position: fixed;
+  top: 50%; transform: translateY(-50%);
+  right: max(calc((100vw - 1100px) / 2 - 44px), 8px);
+  z-index: 150;
+  display: flex; flex-direction: column; gap: 8px;
+}
+.scroll-dot {
+  width: 8px; height: 8px; border-radius: 50%;
+  background: var(--dim); border: 1px solid var(--border);
+  cursor: pointer; transition: .25s; position: relative;
+}
+.scroll-dot:hover, .scroll-dot.active {
+  background: var(--teal); border-color: var(--teal);
+  box-shadow: 0 0 10px var(--teal-glow);
+}
+.scroll-dot .dot-tip {
+  position: absolute; right: 16px; top: 50%; transform: translateY(-50%);
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: 8px; padding: 4px 10px;
+  font-family: var(--font-label); font-size: 8px; color: var(--teal);
+  letter-spacing: .12em; text-transform: uppercase; white-space: nowrap;
+  opacity: 0; pointer-events: none; transition: opacity .2s;
+}
+.scroll-dot:hover .dot-tip { opacity: 1; }
+@media (max-width: 1200px) { .scroll-nav { display: none; } }
+
+/* ── SECTION DIVIDER ── */
+.sec-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, oklch(0.78 0.15 175 / 0.2), transparent);
+  margin: 0 28px;
+}
+</style>
+</head>
+<body id="top">
+
+<!-- SCROLL NAV DOTS -->
+<nav class="scroll-nav" aria-label="Section navigation">
+  <div class="scroll-dot active" data-target="hero"><span class="dot-tip">Hero</span></div>
+  <div class="scroll-dot" data-target="wedge"><span class="dot-tip">The Wedge</span></div>
+  <div class="scroll-dot" data-target="language"><span class="dot-tip">Language</span></div>
+  <div class="scroll-dot" data-target="proof"><span class="dot-tip">Proof</span></div>
+  <div class="scroll-dot" data-target="sequence"><span class="dot-tip">Sequence</span></div>
+  <div class="scroll-dot" data-target="scripts"><span class="dot-tip">Scripts</span></div>
+  <div class="scroll-dot" data-target="plays"><span class="dot-tip">Six Plays</span></div>
+  <div class="scroll-dot" data-target="objections"><span class="dot-tip">Objections</span></div>
+  <div class="scroll-dot" data-target="ask"><span class="dot-tip">The Ask</span></div>
+  <div class="scroll-dot" data-target="math"><span class="dot-tip">The Math</span></div>
+  <div class="scroll-dot" data-target="compliance"><span class="dot-tip">Compliance</span></div>
+  <div class="scroll-dot" data-target="ramp"><span class="dot-tip">First Week</span></div>
+</nav>
+
+<div class="site-shell">
+
+  <!-- ── NAVBAR ── -->
+  <nav class="navbar">
+    <a class="nav-brand" href="https://dbrlibrary.com">
+      <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M24 3 6 10v13c0 11.5 7.7 19.6 18 22 10.3-2.4 18-10.5 18-22V10L24 3Z" stroke="oklch(0.78 0.15 175)" stroke-width="2.4" fill="oklch(0.78 0.15 175 / 0.07)"/>
+        <path d="M26.5 12 17 26h6l-2 10 9.5-14h-6l2-10Z" fill="oklch(0.78 0.15 175)"/>
+      </svg>
+      <div class="nav-wordmark">DREAMS <span>BUSINESS</span>RESOURCES</div>
+    </a>
+    <div class="nav-links">
+      <a href="#wedge">The Wedge</a>
+      <a href="#proof">Proof Engine</a>
+      <a href="#scripts">Scripts</a>
+      <a href="#objections">Objections</a>
+      <a class="nav-cta" href="#ramp">First Week →</a>
+    </div>
+  </nav>
+
+  <!-- ══════════════════════════════════════════
+       HERO
+  ══════════════════════════════════════════ -->
+  <section id="hero" class="hero-wrap">
+    <div class="hero-badge"><div class="hero-dot"></div>Field Sales Intelligence · 2026 Edition</div>
+
+    <div class="hero-split">
+      <div class="hero-left">
+        <h1>Get In Front of the<br><span>People Who Sign the Check</span></h1>
+        <p class="hero-sub">The C-Suite Outreach Playbook. Every touch, every script, every objection — engineered to turn a cold executive into a fifteen-minute appointment. Read it once. Run it forever.</p>
+        <div class="hero-buttons">
+          <a href="#wedge" class="btn-primary">Start With the Wedge →</a>
+          <a href="#scripts" class="btn-secondary">Jump to Scripts</a>
+        </div>
+        <div class="hero-chips">
+          <div class="hero-chip">
+            <div class="chip-icon">⏱️</div>
+            <div><div class="chip-num"><span data-count="20">0</span>s</div><div class="chip-label">Phone Opener</div></div>
+          </div>
+          <div class="hero-chip">
+            <div class="chip-icon">🎯</div>
+            <div><div class="chip-num" data-count="6">0</div><div class="chip-label">Core Plays</div></div>
+          </div>
+          <div class="hero-chip">
+            <div class="chip-icon">📡</div>
+            <div><div class="chip-num" data-count="11">0</div><div class="chip-label">Touch Cadence</div></div>
+          </div>
+          <div class="hero-chip">
+            <div class="chip-icon">🤝</div>
+            <div><div class="chip-num"><span data-count="15">0</span>m</div><div class="chip-label">The Ask</div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Command Center Panel -->
+      <div class="command-center">
+        <div class="cc-head">
+          <div class="cc-title">OUTREACH CONTROL</div>
+          <div class="cc-active"><div class="cc-dot"></div>FIELD READY</div>
+        </div>
+        <div class="cc-body">
+          <div class="cc-orb-wrap">
+            <div class="cc-orb">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M24 3 6 10v13c0 11.5 7.7 19.6 18 22 10.3-2.4 18-10.5 18-22V10L24 3Z" stroke="oklch(0.78 0.15 175)" stroke-width="2.4" fill="oklch(0.78 0.15 175 / 0.07)"/>
+                <path d="M26.5 12 17 26h6l-2 10 9.5-14h-6l2-10Z" fill="oklch(0.78 0.15 175)"/>
+              </svg>
+            </div>
+            <div class="cc-orb-base"></div>
+          </div>
+          <div class="cc-agents">
+            <div class="cc-agent teal">
+              <div class="cc-ico">🎯</div>
+              <div><div class="cc-name">The Wedge</div><div class="cc-desc">One message. Every touch. Never varies.</div><div class="cc-status">LOADED</div></div>
+            </div>
+            <div class="cc-agent purple">
+              <div class="cc-ico">📶</div>
+              <div><div class="cc-name">The Sequence</div><div class="cc-desc">Human touch first. Email never opens.</div><div class="cc-status">ARMED</div></div>
+            </div>
+            <div class="cc-agent gold">
+              <div class="cc-ico">🧾</div>
+              <div><div class="cc-name">The Proof</div><div class="cc-desc">Their numbers, side by side with ours.</div><div class="cc-status">READY</div></div>
+            </div>
+            <div class="cc-agent green">
+              <div class="cc-ico">📅</div>
+              <div><div class="cc-name">The Ask</div><div class="cc-desc">Two times. One decision. Every time.</div><div class="cc-status">ACTIVE</div></div>
+            </div>
+          </div>
+        </div>
+        <div class="cc-foot">
+          <div class="cc-sys">SYSTEM · <b>DO IT FIRST LEADERSHIP</b></div>
+          <svg width="80" height="20" viewBox="0 0 80 20" fill="none">
+            <path d="M1 17 L11 14 L21 15 L31 9 L41 11 L51 5 L61 7 L79 1" stroke="oklch(0.80 0.20 140)" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Principle Cards -->
+  <div class="page">
+    <div class="principle-grid reveal">
+      <div class="principle-card teal">
+        <div class="p-hex">🗝️</div>
+        <div class="p-name">Specific</div>
+        <div class="p-desc">A real number beats a vague benefit every single time.</div>
+      </div>
+      <div class="principle-card purple">
+        <div class="p-hex">👤</div>
+        <div class="p-name">Personal</div>
+        <div class="p-desc">Research first. Generic outreach gets deleted unread.</div>
+      </div>
+      <div class="principle-card gold">
+        <div class="p-hex">🔁</div>
+        <div class="p-name">Persistent</div>
+        <div class="p-desc">Most appointments come after touch five. Most reps stop at two.</div>
+      </div>
+      <div class="principle-card green">
+        <div class="p-hex">⚡</div>
+        <div class="p-name">Fast</div>
+        <div class="p-desc">Twenty seconds to earn the next twenty. Never waste the first breath.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec-divider"></div>
+
+  <!-- ══════════════════════════════════════════
+       01 · THE WEDGE
+  ══════════════════════════════════════════ -->
+  <div class="sec-header" id="wedge">
+    <div class="sec-line"></div>
+    <div class="sec-label">01 · Your Wedge</div>
+    <div class="sec-line rev"></div>
+  </div>
+
+  <div class="sec-content reveal">
+    <h2 class="sec-title">One Message. <span class="grad-teal">Every Touch.</span></h2>
+    <p class="sec-intro">Every call, voicemail, message, video, and email drives to one idea. Lead with this — not with your company, not with your product, not with your credentials. The wedge is what gets you the fifteen minutes. Everything else is what you do once you have them.</p>
+
+    <div class="prompt-label">▶ The Wedge — Say It Word for Word</div>
+    <div class="prompt-box">
+      "I work with companies like yours and typically find <span class="said">10 to 40 percent in costs they're currently overpaying</span> — without changing vendors or disrupting operations. I'd like to do a quick apples-to-apples comparison for you. It takes 15 minutes and it's free."
+    </div>
+
+    <p class="sec-intro">Three things make it work — and if you change the wording, you usually break one of them.</p>
+
+    <div class="caps-grid">
+      <div class="glow-card teal cap-card">
+        <div class="cap-icon">🔢</div>
+        <div><div class="cap-title">It's Specific</div><div class="cap-desc">"10 to 40 percent" is a claim an executive can test. "We can save you money" is noise they've heard from forty vendors this quarter. Numbers create the mental picture; adjectives don't.</div></div>
+      </div>
+      <div class="glow-card coral cap-card">
+        <div class="cap-icon">🔥</div>
+        <div><div class="cap-title">It Implies Present Loss</div><div class="cap-desc">You're not offering a future gain — you're saying money is leaking <em>right now</em>, this month, while they read your email. Loss is a stronger motivator than gain, and executives feel it as a performance issue.</div></div>
+      </div>
+      <div class="glow-card green cap-card">
+        <div class="cap-icon">⏳</div>
+        <div><div class="cap-title">It Respects Their Time</div><div class="cap-desc">Fifteen minutes and free. You've pre-answered the two questions every executive asks before agreeing to anything: how long, and what's it going to cost me?</div></div>
+      </div>
+      <div class="glow-card gold cap-card">
+        <div class="cap-icon">🚪</div>
+        <div><div class="cap-title">It Removes the Switching Fear</div><div class="cap-desc">"Without changing vendors or disrupting operations" kills the objection before it forms. Most executives don't say no to savings — they say no to the project they imagine behind it.</div></div>
+      </div>
+    </div>
+
+    <div class="callout cy">
+      <b>Compliance-safe variant.</b> When you're putting it in writing — email, one-pager, video caption, LinkedIn message — use this version until your specific figures clear review: "I work with companies like yours to identify recoverable costs in their benefits, payroll tax, and vendor spend. In most cases we find meaningful savings without changing vendors or disrupting operations. The comparison is free and takes about 15 minutes." Same wedge, cleaner paper trail. See <a href="#compliance" style="color:var(--teal);">Section 10</a>.
+    </div>
+  </div>
+
+  <div class="sec-divider"></div>
+
+  <!-- ══════════════════════════════════════════
+       02 · LANGUAGE RULES
+  ══════════════════════════════════════════ -->
+  <div class="sec-header" id="language">
+    <div class="sec-line"></div>
+    <div class="sec-label">02 · Language Rules</div>
+    <div class="sec-line rev"></div>
+  </div>
+
+  <div class="sec-content reveal">
+    <h2 class="sec-title">Say This, <span class="grad-teal">Not That</span></h2>
+    <p class="sec-intro">The exact words matter more than the tactic. A great strategy delivered in weak language loses to an average strategy delivered in strong language. Train every rep on these seven replacements until they come out automatically.</p>
+
+    <div class="swap-grid">
+      <div><div class="swap-head yes">✓ Say This</div>
+        <div class="glow-card green swap-card">"I typically find 10 to 40 percent in costs companies are overpaying."<span class="why">A testable number. It creates a picture.</span></div></div>
+      <div><div class="swap-head no">✗ Not That</div>
+        <div class="glow-card coral swap-card">"We can save you money on your expenses."<span class="why">Every vendor says this. It creates nothing.</span></div></div>
+
+      <div><div class="glow-card green swap-card">"I have Thursday at 10 or Friday at 2 — which is easier?"<span class="why">A yes/no decision. Ten seconds of their effort.</span></div></div>
+      <div><div class="glow-card coral swap-card">"When are you free to connect sometime?"<span class="why">You just assigned homework to a CEO.</span></div></div>
+
+      <div><div class="glow-card green swap-card">"Most people I show this to are happy — right until they see the number."<span class="why">Agrees with them, then reframes. No friction.</span></div></div>
+      <div><div class="glow-card coral swap-card">"I understand, but just give us a chance."<span class="why">'But' erases everything before it. And you sound like you're begging.</span></div></div>
+
+      <div><div class="glow-card green swap-card">"I'll be brief —"<span class="why">Buys you the next fifteen seconds instantly.</span></div></div>
+      <div><div class="glow-card coral swap-card">"How are you doing today?"<span class="why">Announces 'salesperson' before word four.</span></div></div>
+
+      <div><div class="glow-card green swap-card">"It only matters once I plug in your numbers."<span class="why">Makes the meeting the product, not the brochure.</span></div></div>
+      <div><div class="glow-card coral swap-card">"Sure, I'll send you some information."<span class="why">You just traded a live human for an attachment nobody opens.</span></div></div>
+
+      <div><div class="glow-card green swap-card">"Who owns the benefits and payroll tax line — you or your CFO?"<span class="why">Routes you to the decision-maker without asking permission.</span></div></div>
+      <div><div class="glow-card coral swap-card">"Are you the right person to speak with?"<span class="why">Invites a one-word no.</span></div></div>
+
+      <div><div class="glow-card green swap-card">"I'll have something specific for you when you call back."<span class="why">Gives them a reason the callback is worth it.</span></div></div>
+      <div><div class="glow-card coral swap-card">"Just following up to touch base."<span class="why">Zero new value. This is the most-deleted sentence in sales.</span></div></div>
+    </div>
+  </div>
+
+  <div class="sec-divider"></div>
+
+  <!-- ══════════════════════════════════════════
+       03 · THE PROOF ENGINE
+  ══════════════════════════════════════════ -->
+  <div class="sec-header" id="proof">
+    <div class="sec-line"></div>
+    <div class="sec-label">03 · What's Behind the Wedge</div>
+    <div class="sec-line rev"></div>
+  </div>
+
+  <div class="sec-content reveal">
+    <h2 class="sec-title">The Wedge Opens the Door. <span class="grad-teal">This Is What's Behind It.</span></h2>
+    <p class="sec-intro">You never lead with product — but the moment an executive leans in and asks "how?", you need one clean sentence per solution. Know these five cold. You are not explaining the plan on the phone; you are proving there is something real to look at in fifteen minutes.</p>
+
+    <div class="products-grid">
+      <div class="glow-card teal prod-card">
+        <div class="prod-top">
+          <div class="prod-icon-wrap">🧮</div>
+          <div><div class="prod-name">Section 125 &amp; Pre-Tax Plan Architecture</div><div class="prod-tag">Payroll Tax · Employer + Employee</div></div>
+        </div>
+        <div class="prod-desc">A properly structured Section 125 cafeteria plan lets employees pay for qualified benefits with pre-tax dollars. That reduces the wage base both sides pay FICA on — which is real money on both the employer P&amp;L and the employee's take-home.</div>
+        <div class="prod-features">
+          <div class="prod-feat"><div class="feat-dot"></div>Employer FICA runs 7.65% of covered wages — a lower taxable wage base moves that line directly.</div>
+          <div class="prod-feat"><div class="feat-dot"></div>Employees typically see more net pay, which makes it one of the rare "cost saver" conversations that isn't a benefit cut.</div>
+          <div class="prod-feat"><div class="feat-dot"></div>Quantum-style supplemental programs layer on top of existing coverage — nobody loses their doctor, nobody changes carriers.</div>
+          <div class="prod-feat"><div class="feat-dot"></div>Best fit: 50+ W-2 employees, stable headcount, in-house or outsourced payroll.</div>
+        </div>
+        <div class="prompt-label" style="margin-top:14px;">Door opener</div>
+        <div class="prompt-box" style="font-size:.88rem;">"How many W-2 employees are you running payroll on right now? …That's the line I'd want to look at. There's usually recoverable payroll tax sitting in it, and the employees typically end up with more take-home, not less coverage."</div>
+      </div>
+
+      <div class="glow-card gold prod-card">
+        <div class="prod-top">
+          <div class="prod-icon-wrap">🔬</div>
+          <div><div class="prod-name">R&amp;D and Specialty Tax Credits</div><div class="prod-tag">Federal + State · Often Retroactive</div></div>
+        </div>
+        <div class="prod-desc">Most owners think R&amp;D credits are for laboratories. They're for anyone improving a product, process, formula, or software — which describes most manufacturers, contractors, engineering firms, food producers, and software shops in your territory.</div>
+        <div class="prod-features">
+          <div class="prod-feat"><div class="feat-dot"></div>Qualified small businesses can apply a portion of the credit against payroll tax — up to $500,000 per year — so it can pay off even pre-profit.</div>
+          <div class="prod-feat"><div class="feat-dot"></div>Open tax years can often be amended, which means found money for work already done.</div>
+          <div class="prod-feat"><div class="feat-dot"></div>Their CPA filing the return is not the same as their CPA running a credit study. That distinction is the whole conversation.</div>
+          <div class="prod-feat"><div class="feat-dot"></div>Best fit: manufacturing, construction, engineering, agriculture, software, food &amp; beverage.</div>
+        </div>
+        <div class="prompt-label" style="margin-top:14px;">Door opener</div>
+        <div class="prompt-box" style="font-size:.88rem;">"Quick one — has anyone run an actual R&amp;D credit study on your operation, or does your CPA just file the return? Those are two different things, and the gap between them is usually six figures."</div>
+      </div>
+
+      <div class="glow-card blue prod-card">
+        <div class="prod-top">
+          <div class="prod-icon-wrap">🏥</div>
+          <div><div class="prod-name">Group Health &amp; Benefits Repricing</div><div class="prod-tag">The Apples-to-Apples Play</div></div>
+        </div>
+        <div class="prod-desc">This is the literal home of the wedge. Same coverage, same network tier, same deductibles — priced side by side. You are not asking them to switch. You are asking them to look.</div>
+        <div class="prod-features">
+          <div class="prod-feat"><div class="feat-dot"></div>Renewal season is your urgency clock — ask when their plan year ends and work backward 90 days.</div>
+          <div class="prod-feat"><div class="feat-dot"></div>Most executives have never seen a true line-by-line comparison, only a broker's renewal summary.</div>
+          <div class="prod-feat"><div class="feat-dot"></div>Pairs naturally with Section 125 — one conversation, two savings lines.</div>
+          <div class="prod-feat"><div class="feat-dot"></div>Best fit: anyone renewing in the next two quarters. Which is everyone, eventually.</div>
+        </div>
+        <div class="prompt-label" style="margin-top:14px;">Door opener</div>
+        <div class="prompt-box" style="font-size:.88rem;">"When does your plan year end? …Then let's put 15 minutes on the calendar about 90 days out. I'll show you the same coverage priced apples to apples. If we're higher, you've lost 15 minutes and gained leverage with your current broker."</div>
+      </div>
+
+      <div class="glow-card purple prod-card">
+        <div class="prod-top">
+          <div class="prod-icon-wrap">🤖</div>
+          <div><div class="prod-name">AI Services &amp; Automation</div><div class="prod-tag">Labor Cost · Speed · Capacity</div></div>
+        </div>
+        <div class="prod-desc">The newest door and often the easiest — every executive in 2026 has "figure out AI" on their list and no plan for it. This one converts on curiosity, not on pain.</div>
+        <div class="prod-features">
+          <div class="prod-feat"><div class="feat-dot"></div>Reframes the wedge from cost recovery to capacity recovery: same team, more output.</div>
+          <div class="prod-feat"><div class="feat-dot"></div>Highly demo-able — a five-minute screen share does more than a fifty-page proposal.</div>
+          <div class="prod-feat"><div class="feat-dot"></div>Excellent second-meeting expander after you've already delivered a savings number.</div>
+          <div class="prod-feat"><div class="feat-dot"></div>Best fit: owner-operators, growing firms hitting a hiring wall, high-admin industries.</div>
+        </div>
+        <div class="prompt-label" style="margin-top:14px;">Door opener</div>
+        <div class="prompt-box" style="font-size:.88rem;">"What's the one task your team spends the most hours on that nobody enjoys? …That's usually the first thing we automate. I can show you what it looks like in 15 minutes."</div>
+      </div>
+
+      <div class="glow-card green prod-card">
+        <div class="prod-top">
+          <div class="prod-icon-wrap">📈</div>
+          <div><div class="prod-name">RIA, Wealth &amp; Exit Planning</div><div class="prod-tag">The Long Play · Highest Lifetime Value</div></div>
+        </div>
+        <div class="prod-desc">The savings conversation earns trust. The wealth conversation is where that trust compounds. Never lead here — but always be listening for the opening, because the owner's personal balance sheet is the biggest deal in the building.</div>
+        <div class="prod-features">
+          <div class="prod-feat"><div class="feat-dot"></div>Listen for: "I'm looking at five more years," "my kids aren't taking it over," "we had an offer."</div>
+          <div class="prod-feat"><div class="feat-dot"></div>Business savings and personal wealth are the same conversation to an owner — they're the same wallet.</div>
+          <div class="prod-feat"><div class="feat-dot"></div>Where a $4,000 relationship quietly becomes a career account.</div>
+          <div class="prod-feat"><div class="feat-dot"></div>Best fit: founder-owned businesses, principals over 50, anyone who just took a call from a PE buyer.</div>
+        </div>
+        <div class="prompt-label" style="margin-top:14px;">Door opener (meeting two, never meeting one)</div>
+        <div class="prompt-box" style="font-size:.88rem;">"Now that we've found this on the company side — has anyone helped you map what happens to your personal number when you eventually step back from this?"</div>
+      </div>
+    </div>
+
+    <div class="callout">
+      <b>The rule that keeps you out of trouble.</b> You are the door, not the technician. Your job on the first call is to earn fifteen minutes and route the details to the specialist. Never quote a specific plan design, credit amount, or tax outcome on a cold call. "That's exactly what the comparison is for" is a complete and professional answer to every technical question you can't answer with certainty.
+    </div>
+
+    <div class="prompt-label">Match the wedge to the seat</div>
+    <div class="use-grid">
+      <div class="glow-card teal use-card"><div class="use-emoji">👔</div><div class="use-title">CEO / Owner</div><div class="use-desc">Talks in outcomes and time. Lead with the number and the fifteen minutes. Don't explain mechanics.</div></div>
+      <div class="glow-card gold use-card"><div class="use-emoji">📊</div><div class="use-title">CFO / Controller</div><div class="use-desc">Talks in lines and risk. Lead with "apples to apples" and "no vendor change." Bring the math.</div></div>
+      <div class="glow-card purple use-card"><div class="use-emoji">🧑‍💼</div><div class="use-title">HR / People Ops</div><div class="use-desc">Talks in employee experience. Lead with "more take-home pay, same coverage, no disruption."</div></div>
+      <div class="glow-card blue use-card"><div class="use-emoji">🏗️</div><div class="use-title">COO / Ops</div><div class="use-desc">Talks in disruption. Lead with what does <em>not</em> change: no carrier switch, no new system, no project.</div></div>
+    </div>
+  </div>
+
+  <div class="sec-divider"></div>
+
+  <!-- ══════════════════════════════════════════
+       04 · THE SEQUENCE
+  ══════════════════════════════════════════ -->
+  <div class="sec-header" id="sequence">
+    <div class="sec-line"></div>
+    <div class="sec-label">04 · The Outreach Sequence</div>
+    <div class="sec-line rev"></div>
+  </div>
+
+  <div class="sec-content reveal">
+    <h2 class="sec-title">The Right Order <span class="grad-teal">Changes Everything</span></h2>
+    <p class="sec-intro">Email does not initiate the appointment. Email is a follow-up tool. It confirms, it delivers the one-pager, it recaps. It does not break the ice with a C-level executive who receives two hundred emails a day and reads them on a phone between meetings. The opener is always a live human touch, in this priority order.</p>
+
+    <div class="flow-steps">
+      <div class="flow-step"><div class="flow-num">01</div><div class="flow-title">Warm Referral</div><div class="flow-hint">Borrowed trust. Skips the gatekeeper entirely. Always your first move.</div></div>
+      <div class="flow-step"><div class="flow-num">02</div><div class="flow-title">Phone Opener</div><div class="flow-hint">Live human voice. Twenty seconds to earn fifteen minutes.</div></div>
+      <div class="flow-step"><div class="flow-num">03</div><div class="flow-title">LinkedIn Warm-Up</div><div class="flow-hint">Where they already are. Engage genuinely, then connect with a specific offer.</div></div>
+      <div class="flow-step"><div class="flow-num">04</div><div class="flow-title">Email Follow-Up</div><div class="flow-hint">The closer, never the opener. Confirms, delivers, recaps.</div></div>
+    </div>
+
+    <h3 style="font-size:20px;margin:2rem 0 .5rem;font-family:var(--font-head);">The 11-Touch, 21-Day Cadence</h3>
+    <p class="sec-intro">Most reps quit at touch two. Most appointments come after touch five. That gap is where your whole month lives. Run this on every named account — same wedge, changing channel, never repeating yourself.</p>
+
+    <div class="tbl-wrap">
+      <table class="dbr">
+        <thead><tr><th>Day</th><th>Touch</th><th>Channel</th><th>What You Actually Do</th></tr></thead>
+        <tbody>
+          <tr><td>Day 0</td><td>Research</td><td>—</td><td>Ten minutes. Headcount, industry, plan-year timing, recent news, mutual connections. No touch without it.</td></tr>
+          <tr><td>Day 1</td><td>Touch 1</td><td>Phone</td><td>Wedge + binary close. If voicemail, leave the 25-second version and say the number twice.</td></tr>
+          <tr><td>Day 1</td><td>Touch 2</td><td>LinkedIn</td><td>View their profile. Like or comment on one recent post. No connection request yet.</td></tr>
+          <tr><td>Day 3</td><td>Touch 3</td><td>Phone</td><td>Different time of day than Touch 1. Early (7:30–8:30) or late (5:00–6:00) — that's when they answer their own line.</td></tr>
+          <tr><td>Day 4</td><td>Touch 4</td><td>Email</td><td>Short. Reference the voicemail. Wedge in one line, binary close, no attachment.</td></tr>
+          <tr><td>Day 7</td><td>Touch 5</td><td>LinkedIn</td><td>Connection request with a personalized note carrying the wedge. This is where the warm-up pays.</td></tr>
+          <tr><td>Day 9</td><td>Touch 6</td><td>Video</td><td>60–90 second personalized video. Name on screen, their company on screen. Highest reply rate of any touch.</td></tr>
+          <tr><td>Day 11</td><td>Touch 7</td><td>Phone</td><td>Gatekeeper play. Get the direct line, the email, or the best time — one of the three. Never leave empty.</td></tr>
+          <tr><td>Day 14</td><td>Touch 8</td><td>Email</td><td>Peer proof. One sentence on a similar company, one line of result, binary close.</td></tr>
+          <tr><td>Day 17</td><td>Touch 9</td><td>Phone</td><td>Final live attempt. Same wedge, same energy. Do not sound tired.</td></tr>
+          <tr><td>Day 19</td><td>Touch 10</td><td>Referral</td><td>Ask a mutual connection for a warm intro. Loop back to the top of the sequence, warm.</td></tr>
+          <tr><td>Day 21</td><td>Touch 11</td><td>Email</td><td>The break-up. Gracious, zero pressure, leaves the door wide open. Converts more than you'd expect.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout">
+      <b>The persistence rule.</b> Eleven touches over twenty-one days is not pestering — it's professionalism, as long as every touch carries new value and none of them says "just following up." If you can't add something, don't send it. Then park the account and re-enter it in ninety days, or sooner if their renewal window opens.
+    </div>
+  </div>
+
+  <div class="sec-divider"></div>
+
+  <!-- ══════════════════════════════════════════
+       05 · SCRIPTS
+  ══════════════════════════════════════════ -->
+  <div class="sec-header" id="scripts">
+    <div class="sec-line"></div>
+    <div class="sec-label">05 · The Scripts</div>
+    <div class="sec-line rev"></div>
+  </div>
+
+  <div class="sec-content reveal">
+    <h2 class="sec-title">Twenty Seconds <span class="grad-teal">to Stay on the Line</span></h2>
+    <p class="sec-intro">You have one breath before they decide whether you're worth the next twenty seconds. No warm-up. No "how are you today." Lead with the wedge, then handle every response with a binary close. Read these aloud fifty times until they stop sounding like a script and start sounding like you.</p>
+
+    <div class="prompt-label">▶ The 20-Second Phone Opener</div>
+    <div class="prompt-box">
+      "[Name], I'll be brief — I work with companies like yours and typically find 10 to 40 percent in costs they're overpaying. I'd like to do a quick apples-to-apples comparison — 15 minutes, no cost. I've got Thursday at 10 or Friday at 2. Which is easier?"
+      <span class="stage">Then stop talking. The silence is doing your work. Whoever speaks first, loses.</span>
+    </div>
+
+    <div class="prompt-label">▶ The Voicemail (Under 25 Seconds)</div>
+    <div class="prompt-box">
+      "[Name], [Your Name] — I work with companies like yours and typically find 10 to 40 percent in costs they're overpaying. I'd like to show you a quick comparison — takes 15 minutes. Call me back at [number] — again, that's [number]. I'll have something specific for you when you do."
+      <span class="stage">Say the number twice, slowly — once mid-message and once at the end. If they have to replay it, you've lost them. And always end with a reason the callback is worth their time.</span>
+    </div>
+
+    <h3 style="font-size:20px;margin:2rem 0 .8rem;font-family:var(--font-head);">The Gatekeeper</h3>
+    <p class="sec-intro">The assistant is not an obstacle — she is the single most informed person in that building about how to reach your prospect. Treat her like the professional she is and she will hand you the key. Treat her like a hurdle and she will bury you permanently. Never lie to her. Ever.</p>
+
+    <div class="prompt-label">▶ The Straight Approach — Use This First</div>
+    <div class="prompt-box">
+      "Hi, this is [Your Name] with Dreams Business Resources — I'm hoping you can help me. I'd like to get 15 minutes with [Name] about recoverable costs in their benefits and payroll tax. Who's the right person to look at that — [Name], or does someone else own it?"
+      <span class="stage">You've asked for help, stated a real reason, and let her route you. This works far more often than any trick.</span>
+    </div>
+
+    <div class="prompt-label">▶ When She Says "He's Not Available"</div>
+    <div class="prompt-box">
+      "No problem — you'd know better than anyone. When's the best time to catch him at his desk, mornings or afternoons? …Perfect, I'll try then. And can I get his direct line so I'm not going through the main number every time?"
+      <span class="stage">Never hang up with nothing. Leave with one of three things: the direct line, the email, or the best window. One of three. Every time.</span>
+    </div>
+
+    <div class="prompt-label">▶ When She Says "Send Me Some Information"</div>
+    <div class="prompt-box">
+      "I will — what's the best address? And so I don't waste his time with something generic: roughly how many employees are you running? …Thank you. I'll send something built around that number and follow up Thursday to make sure it landed."
+      <span class="stage">You just traded a brush-off for a data point, an email address, and a legitimate reason to call back with her name attached.</span>
+    </div>
+
+    <h3 style="font-size:20px;margin:2rem 0 .8rem;font-family:var(--font-head);">LinkedIn</h3>
+
+    <div class="prompt-label">▶ Connection Request (Under 300 Characters)</div>
+    <div class="prompt-box">
+      "[Name] — I work with [industry] companies on recoverable costs in benefits and payroll tax; we typically find 10–40% without changing vendors. Saw [specific thing about their company]. Worth 15 minutes to run an apples-to-apples comparison for [Company]?"
+      <span class="stage">The specific detail is not optional. It's the entire reason they accept.</span>
+    </div>
+
+    <div class="prompt-label">▶ Message After They Accept — Wait 24 Hours</div>
+    <div class="prompt-box">
+      "Thanks for connecting, [Name]. Straight to it: I run a free apples-to-apples comparison on benefits, payroll tax, and vendor spend — 15 minutes, no obligation, and most of what I find doesn't require changing a single vendor. I have Thursday at 10 or Friday at 2. Which works better?"
+      <span class="stage">Do not open with "I'd love to learn more about your business." They know what that means.</span>
+    </div>
+
+    <h3 style="font-size:20px;margin:2rem 0 .8rem;font-family:var(--font-head);">The Personalized Video (60–90 Seconds)</h3>
+    <p class="sec-intro">The single highest-reply-rate touch in the sequence, and almost nobody in your market is doing it. Loom or a phone camera is enough. Their name on a whiteboard or their website open behind you proves in one second that this was made for them.</p>
+
+    <div class="prompt-label">▶ Video Script</div>
+    <div class="prompt-box">
+      <span class="stage">0:00–0:10 — Hold their name up, or have their site on screen.</span>
+      "Hey [Name] — [Your Name], Dreams Business Resources. Made this just for you, so it'll be quick."
+      <span class="stage">0:10–0:35 — The specific research.</span>
+      "I was looking at [Company] and saw [specific detail — headcount, growth, a recent hire, a new location]. Companies at that stage almost always have money sitting in the benefits and payroll tax lines that nobody's audited."
+      <span class="stage">0:35–1:05 — The wedge.</span>
+      "I work with companies like yours and typically find 10 to 40 percent in costs they're overpaying — without changing vendors or disrupting operations. I do an apples-to-apples comparison, it's free, and it takes 15 minutes."
+      <span class="stage">1:05–1:20 — The binary close, said to camera.</span>
+      "I've got Thursday at 10 or Friday at 2. Reply with either one and I'll send the invite. That's it — thanks for the 90 seconds."
+    </div>
+
+    <h3 style="font-size:20px;margin:2rem 0 .8rem;font-family:var(--font-head);">Email — Follow-Up Only, Never the Opener</h3>
+
+    <div class="prompt-label">▶ Touch 4 — After the Voicemail</div>
+    <div class="prompt-box">
+      <span class="stage">Subject: 15 minutes · [Company] cost comparison</span>
+      "[Name] — left you a voicemail Tuesday, so I'll keep this shorter than that.<br><br>
+      I work with [industry] companies and typically find 10–40% in recoverable costs — benefits, payroll tax, vendor spend — without changing vendors or disrupting anything.<br><br>
+      The comparison is free and takes 15 minutes. Thursday at 10 or Friday at 2?<br><br>
+      [Your Name] · Dreams Business Resources · [phone]"
+      <span class="stage">No attachment. No brochure. No calendar link buried in a signature block. One idea, one ask.</span>
+    </div>
+
+    <div class="prompt-label">▶ Touch 8 — Peer Proof</div>
+    <div class="prompt-box">
+      <span class="stage">Subject: What a [industry] company your size found</span>
+      "[Name] — one more and then I'll stop crowding your inbox.<br><br>
+      A [industry] company with roughly your headcount ran the same 15-minute comparison last quarter. They kept every vendor, kept every plan, and still moved a meaningful number off their cost line. Their words afterward were 'I assumed we'd already checked that.'<br><br>
+      Most people assume that. That's exactly why it's worth 15 minutes.<br><br>
+      Thursday at 10 or Friday at 2?"
+      <span class="stage">Only use a peer result you can substantiate. See Section 10.</span>
+    </div>
+
+    <div class="prompt-label">▶ Touch 11 — The Break-Up</div>
+    <div class="prompt-box">
+      <span class="stage">Subject: Closing the loop</span>
+      "[Name] — I've reached out a few times about a free cost comparison and haven't heard back, which usually means one of three things: it's not a priority right now, someone else owns it, or my timing is just bad.<br><br>
+      Any of those is a fine answer. If it's the second one, point me to the right person and I'll leave you alone. If it's timing, tell me when your plan year ends and I'll reach back out 90 days ahead of it.<br><br>
+      Either way — appreciate your time.<br><br>
+      [Your Name]"
+      <span class="stage">This email books more meetings than most reps expect. Zero pressure gets replies that pressure never earned.</span>
+    </div>
+
+    <div class="prompt-label">▶ The Referral Ask — Your Highest-Yield Sentence</div>
+    <div class="prompt-box">
+      "[Referrer name], quick favor. I do a free 15-minute apples-to-apples cost comparison for business owners — benefits, payroll tax, vendor spend. You know [Prospect] at [Company]. Would you be comfortable sending a two-line introduction? I'll write it for you so it takes ten seconds."
+      <span class="stage">Always offer to write the intro. 'I'll write it for you' is what converts a maybe into a sent email.</span>
+    </div>
+  </div>
+
+  <div class="sec-divider"></div>
+
+  <!-- ══════════════════════════════════════════
+       06 · SIX PLAYS
+  ══════════════════════════════════════════ -->
+  <div class="sec-header" id="plays">
+    <div class="sec-line"></div>
+    <div class="sec-label">06 · The Six Highest-Yield Plays</div>
+    <div class="sec-line rev"></div>
+  </div>
+
+  <div class="sec-content reveal">
+    <h2 class="sec-title">Six Plays. <span class="grad-teal">One Wedge.</span></h2>
+    <p class="sec-intro">Twelve tactics is a menu. These six are the playbook — ranked by yield against C-suite specifically. Each one carries the identical wedge; only the delivery changes. Master them in order.</p>
+
+    <div class="steps-list">
+      <div class="step-row"><div class="step-num">01</div><div><div class="step-title">Warm Referrals &amp; Introductions</div><div class="step-desc">Executives engage when the outreach arrives through someone they already trust. A referral skips the gatekeeper and borrows credibility instantly — you start the conversation with the trust most reps spend six touches trying to build. Always your first move, and always the one reps under-use because asking feels uncomfortable. Ask anyway. Ask every satisfied client, every centre of influence, every CPA and attorney in your network, and always offer to write the intro yourself.</div></div></div>
+
+      <div class="step-row"><div class="step-num">02</div><div><div class="step-title">The Cost-Comparison Offer — Your Signature Play</div><div class="step-desc">This <em>is</em> the wedge, packaged as a deliverable. A free, no-obligation, apples-to-apples comparison is concrete, low-risk, and self-evidently valuable — and critically, it is a thing you <em>do</em>, not a thing you claim. It converts because the executive isn't agreeing to buy anything; they're agreeing to look at their own numbers. Nobody has ever been fired for looking at their own numbers.</div></div></div>
+
+      <div class="step-row"><div class="step-num">03</div><div><div class="step-title">Data-Backed Peer Case Studies</div><div class="step-desc">Executives trust results from companies that look like theirs far more than any claim you make about yourself. Lead with proof, not promises. Build a one-page result for each of your top three industries — headcount, what was found, what didn't change — and keep it substantiated. "A construction firm your size" beats "our clients love us" a hundred times out of a hundred.</div></div></div>
+
+      <div class="step-row"><div class="step-num">04</div><div><div class="step-title">Executive Roundtables</div><div class="step-desc">Peers and learning are two things the C-suite almost never turns down. An exclusive, relevant roundtable is an invitation, not a pitch — and it repositions you from vendor to convener, which is a permanent status change in that executive's mind. Six to eight non-competing owners, ninety minutes, one sharp topic, and you in the room as host. The follow-up calls after a roundtable are the easiest calls you will make all year.</div></div></div>
+
+      <div class="step-row"><div class="step-num">05</div><div><div class="step-title">Personalized Video Messages</div><div class="step-desc">A 60–90 second video addressing them by name cuts straight through a text-only inbox and proves in the first two seconds that you did the work. It is the closest thing to a live meeting you can put in an email, and your competition is not doing it. Keep it under ninety seconds, show their name or their site on screen, and close to camera with two specific times.</div></div></div>
+
+      <div class="step-row"><div class="step-num">06</div><div><div class="step-title">Value-First LinkedIn</div><div class="step-desc">LinkedIn is where executives already are, which makes it the lowest-friction warm channel you have. Engage genuinely first — a real comment on a real post, not an emoji — then connect with an immediate, specific offer. Never send "let's network" or "I'd love to learn more about what you do." Post your own content consistently too: when they check your profile after your call, what they find decides whether they take the meeting.</div></div></div>
+    </div>
+  </div>
+
+  <div class="sec-divider"></div>
+
+  <!-- ══════════════════════════════════════════
+       07 · OBJECTIONS
+  ══════════════════════════════════════════ -->
+  <div class="sec-header" id="objections">
+    <div class="sec-line"></div>
+    <div class="sec-label">07 · The Objection Matrix</div>
+    <div class="sec-line rev"></div>
+  </div>
+
+  <div class="sec-content reveal">
+    <h2 class="sec-title">Ten Answers That <span class="grad-teal">End in the Same Ask</span></h2>
+    <p class="sec-intro">Every objection gets the same three-part treatment: agree, reframe, re-ask. Never argue. Never say "but." And never end a response without putting two times back on the table — an objection you answer without closing is a conversation you just donated.</p>
+
+    <div class="caps-grid">
+      <div class="glow-card coral"><div class="obj-q">Send me some information.</div><div class="obj-a">"Happy to — but it only matters once I plug in your numbers. Give me 15 minutes and the email I send afterward will actually mean something. <b>Thursday or Friday?</b>"</div></div>
+
+      <div class="glow-card teal"><div class="obj-q">We're happy with our current provider.</div><div class="obj-a">"Most of the people I show this to are — right up until they see the number. That's exactly why it's worth 15 minutes. <b>Thursday at 10 or Friday at 2?</b>"</div></div>
+
+      <div class="glow-card gold"><div class="obj-q">We just renewed / we did this last year.</div><div class="obj-a">"Perfect timing, actually — that means you have current numbers, which is all I need to run the comparison. And if we're not better, you walk into next renewal with leverage. <b>Thursday or Friday?</b>"</div></div>
+
+      <div class="glow-card purple"><div class="obj-q">I don't have time.</div><div class="obj-a">"That's exactly why I keep it to 15 minutes and why I do the work before we talk. I'm not asking for a discovery session — I'm asking for one look at one page. <b>Early Thursday or late Friday?</b>"</div></div>
+
+      <div class="glow-card blue"><div class="obj-q">What's this about? / Is this a sales call?</div><div class="obj-a">"It is — I'll be straight with you. I do a free apples-to-apples comparison on your benefits and payroll tax lines. Most of the time I find recoverable cost. Sometimes I don't, and I tell you that too. <b>Fifteen minutes, Thursday or Friday?</b>"</div></div>
+
+      <div class="glow-card green"><div class="obj-q">Talk to my CFO / broker / CPA.</div><div class="obj-a">"Absolutely — and I'd rather have them in the room. Can you connect us? Better yet, put 15 minutes on the calendar with both of you. It goes faster when the person who owns the number is there. <b>What's their name?</b>"</div></div>
+
+      <div class="glow-card coral"><div class="obj-q">We're not interested.</div><div class="obj-a">"Fair enough — and I'd probably say the same thing to a call like this. One question before I let you go: when does your plan year end? I'll reach back out 90 days ahead of it and you'll never hear from me in between."</div></div>
+
+      <div class="glow-card teal"><div class="obj-q">How much does this cost?</div><div class="obj-a">"The comparison is free — there's no fee to look. If we find something and you decide to act on it, we'll talk about what that looks like then. But nothing about the 15 minutes costs you anything. <b>Thursday or Friday?</b>"</div></div>
+
+      <div class="glow-card gold"><div class="obj-q">How did you get my number?</div><div class="obj-a">"Public listing — I researched [Company] before I called because I don't like wasting anyone's time with a generic pitch. Which is also why I already know [specific detail]. <b>Fifteen minutes, Thursday or Friday?</b>"</div></div>
+
+      <div class="glow-card purple"><div class="obj-q">Call me back next quarter.</div><div class="obj-a">"I'll do that — and I'll put it in my calendar right now so it actually happens. Before I let you go: what would have to be true next quarter for this to be worth 15 minutes? <b>That way I lead with the right thing when I call.</b>"</div></div>
+    </div>
+
+    <div class="callout">
+      <b>The one thing you never do.</b> Don't chase the objection down a rabbit hole. You are not there to win a debate about their current broker — you are there to book fifteen minutes. Answer in two sentences, close in one, and if they say no twice, get the plan-year date and leave with your dignity and a future opening.
+    </div>
+  </div>
+
+  <div class="sec-divider"></div>
+
+  <!-- ══════════════════════════════════════════
+       08 · THE ASK
+  ══════════════════════════════════════════ -->
+  <div class="sec-header" id="ask">
+    <div class="sec-line"></div>
+    <div class="sec-label">08 · Always Make the Ask</div>
+    <div class="sec-line rev"></div>
+  </div>
+
+  <div class="sec-content reveal">
+    <h2 class="sec-title">Every Touch <span class="grad-teal">Ends With One</span></h2>
+    <p class="sec-intro">A touch with no specific ask is a wasted touch. Never close with "let's connect" or "let me know your thoughts." Two specific times convert dramatically better than "when are you free?" — because you're asking for a ten-second yes/no decision instead of handing a busy executive a scheduling project.</p>
+
+    <div class="prompt-label">◆ The Binary Close — Always Use This Format</div>
+    <div class="prompt-box" style="font-size:1.05rem;text-align:center;padding:24px 22px;">
+      "I have <span class="said">[Day] at [Time]</span> or <span class="said">[Day] at [Time]</span> — which is easier for you?"
+    </div>
+
+    <div class="caps-grid">
+      <div class="glow-card green cap-card"><div class="cap-icon">✓</div><div><div class="cap-title">Give Two Times, Not a Range</div><div class="cap-desc">"Thursday at 10 or Friday at 2." Not "sometime Thursday." Not "next week." Two fixed points, one decision.</div></div></div>
+      <div class="glow-card teal cap-card"><div class="cap-icon">🤐</div><div><div class="cap-title">Then Stop Talking</div><div class="cap-desc">The silence after the ask belongs to them. Reps lose more appointments by filling that pause than by anything they said before it.</div></div></div>
+      <div class="glow-card gold cap-card"><div class="cap-icon">📩</div><div><div class="cap-title">Confirm in Writing Within Five Minutes</div><div class="cap-desc">Calendar invite with a real agenda line and the fifteen-minute duration visible. A verbal yes with no invite is a no with a delay.</div></div></div>
+      <div class="glow-card purple cap-card"><div class="cap-icon">🔔</div><div><div class="cap-title">Reconfirm 24 Hours Out</div><div class="cap-desc">One line: "Still good for tomorrow at 10? I'll have the comparison framework ready." Cuts no-shows roughly in half.</div></div></div>
+    </div>
+  </div>
+
+  <div class="sec-divider"></div>
+
+  <!-- ══════════════════════════════════════════
+       09 · THE MATH
+  ══════════════════════════════════════════ -->
+  <div class="sec-header" id="math">
+    <div class="sec-line"></div>
+    <div class="sec-label">09 · The Activity Math</div>
+    <div class="sec-line rev"></div>
+  </div>
+
+  <div class="sec-content reveal">
+    <h2 class="sec-title">You Don't Have a Closing Problem. <span class="grad-teal">You Have an Activity Problem.</span></h2>
+    <p class="sec-intro">Almost every rep who says "this doesn't work" made eleven dials last week and stopped at touch two. Outreach is a volume game played with precision — you need both. Use these as planning targets until your own numbers replace them, and they should replace them within sixty days.</p>
+
+    <div class="counter-row">
+      <div class="counter-box"><div class="counter-num" data-count="50">0</div><div class="counter-label">Dials Per Day</div></div>
+      <div class="counter-box"><div class="counter-num" data-count="10">0</div><div class="counter-label">Live Conversations</div></div>
+      <div class="counter-box"><div class="counter-num" data-count="2">0</div><div class="counter-label">Appointments Set</div></div>
+      <div class="counter-box"><div class="counter-num" data-count="10">0</div><div class="counter-label">Appointments Per Week</div></div>
+    </div>
+
+    <p class="sec-intro">Fifty dials produces roughly ten live conversations. Ten conversations, run with the wedge and closed with two times, produces two appointments. Two a day is ten a week. Ten a week is forty a month — and forty appointments a month is a career, not a job. The math is not complicated. The discipline is.</p>
+
+    <h3 style="font-size:20px;margin:2rem 0 .8rem;font-family:var(--font-head);">The Weekly Scoreboard — Track These Five Numbers</h3>
+    <div class="tbl-wrap">
+      <table class="dbr">
+        <thead><tr><th>Metric</th><th>Weekly Target</th><th>What a Miss Actually Means</th></tr></thead>
+        <tbody>
+          <tr><td>Dials</td><td>250</td><td>You have a calendar problem, not a sales problem. Block the hours and defend them.</td></tr>
+          <tr><td>Live conversations</td><td>50</td><td>Wrong call windows. Move to 7:30–8:30am and 4:30–6:00pm when executives answer their own line.</td></tr>
+          <tr><td>Appointments set</td><td>10</td><td>The wedge is being paraphrased or the close is soft. Record yourself and listen back.</td></tr>
+          <tr><td>Appointments held</td><td>8</td><td>Confirmation discipline. Invite within five minutes, reconfirm 24 hours out.</td></tr>
+          <tr><td>Referrals asked for</td><td>5</td><td>The cheapest appointments you'll ever get, and the ask reps skip most often.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout cy">
+      <b>Log every touch in Dreams Cloud.</b> A cadence you don't track is a cadence you don't run. Put every named account into the pipeline, tag the touch number, and set the next task before you hang up the phone. The rep who remembers everything in their head runs a four-touch cadence and swears it was eleven.
+    </div>
+  </div>
+
+  <div class="sec-divider"></div>
+
+  <!-- ══════════════════════════════════════════
+       10 · COMPLIANCE
+  ══════════════════════════════════════════ -->
+  <div class="sec-header" id="compliance">
+    <div class="sec-line"></div>
+    <div class="sec-label">10 · Compliance</div>
+    <div class="sec-line rev"></div>
+  </div>
+
+  <div class="sec-content reveal">
+    <h2 class="sec-title">Stay Sharp. <span class="grad-teal">Stay Clean.</span></h2>
+    <p class="sec-intro">We operate in financial services. Words like "guarantee," "overpaying," and specific savings percentages can draw regulatory scrutiny when they can't be substantiated. None of this is legal or tax advice — it's the standard of care that keeps you, your clients, and this organization safe. Five rules.</p>
+
+    <div class="caps-grid">
+      <div class="glow-card gold cap-card"><div class="cap-icon">📐</div><div><div class="cap-title">Rule 01 — Back the Number</div><div class="cap-desc">Only cite the 10–40% range and peer results where you can show the math. "Apples to apples" is a promise to prove it. Keep the proof within arm's reach and be ready to produce it on the first meeting.</div></div></div>
+
+      <div class="glow-card teal cap-card"><div class="cap-icon">🛡️</div><div><div class="cap-title">Rule 02 — Run Written Claims Past Compliance</div><div class="cap-desc">Before any guarantee, savings figure, or tax outcome goes in writing — email, one-pager, video caption, social post — make sure it clears standard review. Spoken flexibility is not written flexibility.</div></div></div>
+
+      <div class="glow-card coral cap-card"><div class="cap-icon">🚫</div><div><div class="cap-title">Rule 03 — Never Give Tax or Legal Advice</div><div class="cap-desc">You do not opine on whether a specific plan qualifies, what a credit will be worth, or how their return should be filed. That is the specialist's job and the client's CPA's job. "That's exactly what the comparison is for" is your complete answer.</div></div></div>
+
+      <div class="glow-card purple cap-card"><div class="cap-icon">🙅</div><div><div class="cap-title">Rule 04 — Never Misrepresent Who You Are</div><div class="cap-desc">Not to the gatekeeper, not on a voicemail, not on LinkedIn. Never imply an existing relationship, a returned call, or a referral you don't have. One shortcut costs you an account permanently and costs the organization more than that.</div></div></div>
+
+      <div class="glow-card green cap-card"><div class="cap-icon">📵</div><div><div class="cap-title">Rule 05 — Honor Every Opt-Out Immediately</div><div class="cap-desc">Do-not-call and do-not-email requests are honored the moment you receive them, logged in Dreams Cloud, and never re-entered into a cadence. No exceptions, no "one more try."</div></div></div>
+
+      <div class="glow-card blue cap-card"><div class="cap-icon">⚠️</div><div><div class="cap-title">The Golden Rule of C-Suite Outreach</div><div class="cap-desc">Personalization, research, and a real number for <em>their</em> business — every single time. Generic outreach gets deleted. Specific outreach gets appointments. There is no third category.</div></div></div>
+    </div>
+  </div>
+
+  <div class="sec-divider"></div>
+
+  <!-- ══════════════════════════════════════════
+       11 · FIRST WEEK
+  ══════════════════════════════════════════ -->
+  <div class="sec-header" id="ramp">
+    <div class="sec-line"></div>
+    <div class="sec-label">11 · Your First Week</div>
+    <div class="sec-line rev"></div>
+  </div>
+
+  <div class="sec-content reveal">
+    <h2 class="sec-title">Five Days from <span class="grad-teal">Reading to Booked</span></h2>
+    <p class="sec-intro">Do not try to master this playbook before you use it. Reps who "study first" never start. Run this five-day ramp and you will have live appointments on the board before you feel ready — which is exactly how it's supposed to work. Do it first.</p>
+
+    <div class="steps-list">
+      <div class="step-row"><div class="step-num">D1</div><div><div class="step-title">Learn the Wedge Cold</div><div class="step-desc">Say the wedge out loud fifty times. Record yourself on your phone and listen back — if it sounds read, keep going. Then build your target list: 50 named companies in two industries you can actually speak to. Load all 50 into Dreams Cloud with the plan-year field blank and ready.</div></div></div>
+
+      <div class="step-row"><div class="step-num">D2</div><div><div class="step-title">Make 50 Dials</div><div class="step-desc">Not 20. Fifty. Your only goal today is repetition and getting the flinch out of your system — the appointments are a bonus. Leave the 25-second voicemail every time, say the number twice, and log every touch. Expect to feel terrible around dial 15 and noticeably better by dial 40.</div></div></div>
+
+      <div class="step-row"><div class="step-num">D3</div><div><div class="step-title">Add LinkedIn and Ask for Referrals</div><div class="step-desc">Send 20 connection requests with the personalized note. Then ask five people in your existing network for a warm introduction — clients, friends in business, your CPA, your attorney. Offer to write every intro yourself. This is the highest-yield hour of your week and the one most reps skip.</div></div></div>
+
+      <div class="step-row"><div class="step-num">D4</div><div><div class="step-title">Record Five Videos</div><div class="step-desc">Five personalized 90-second videos to your five best-fit accounts. First one will be rough. Fifth one will be good. Send all five anyway — polish is not the standard, personalization is. Then run another 50 dials on top of it.</div></div></div>
+
+      <div class="step-row"><div class="step-num">D5</div><div><div class="step-title">Review, Confirm, Reload</div><div class="step-desc">Pull your five scoreboard numbers and find your weakest link — dials, conversations, or closes. Confirm every appointment on the board with an invite and an agenda line. Reload the list to 50 named accounts and advance every existing account to its next cadence touch. Then do it again next week.</div></div></div>
+    </div>
+
+    <div class="pill-row">
+      <div class="pill">Say the wedge, don't paraphrase it</div>
+      <div class="pill gold">Two times, always</div>
+      <div class="pill green">Log every touch</div>
+      <div class="pill coral">Never say "just following up"</div>
+      <div class="pill">Ask for the referral</div>
+      <div class="pill gold">Get the plan-year date</div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════
+       CTA
+  ══════════════════════════════════════════ -->
+  <div class="cta-box reveal">
+    <div class="cta-icon">🚀</div>
+    <div class="cta-title">Specific. Personal. <span>Persistent.</span></div>
+    <div class="cta-sub">Every C-suite door opens with the right wedge, delivered the right way, at the right time. The scripts are loaded. The sequence is set. The math is on the wall. Now go execute.</div>
+    <div class="cta-buttons">
+      <a href="https://dreamsfaststart.com" class="btn-primary" target="_blank">Open Fast Start Training →</a>
+      <a href="https://dbrlibrary.com" class="btn-secondary">← Back to DBR Library</a>
+    </div>
+    <div class="cta-fine">Lead with the wedge · Follow with the sequence · Close with the binary ask</div>
+  </div>
+
+  <div class="disclaimer">
+    This playbook is provided for internal training and educational purposes only. It is not tax, legal, investment, or insurance advice, and nothing in it should be relied upon as a representation of results. Plan design, tax credit eligibility, and savings outcomes vary by employer and are determined solely by qualified specialists and the client's own tax and legal counsel. All savings figures, percentages, and peer results must be substantiated and cleared through standard compliance review before use in any written or recorded material. Income results vary. DBR training materials are provided for informational use only. © 2026 Dreams Business Resources.
+  </div>
+
+  <!-- ── FOOTER ── -->
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M24 3 6 10v13c0 11.5 7.7 19.6 18 22 10.3-2.4 18-10.5 18-22V10L24 3Z" stroke="oklch(0.78 0.15 175)" stroke-width="2.4" fill="oklch(0.78 0.15 175 / 0.07)"/>
+            <path d="M26.5 12 17 26h6l-2 10 9.5-14h-6l2-10Z" fill="oklch(0.78 0.15 175)"/>
+          </svg>
+          <div class="nav-wordmark">DREAMS <span>BUSINESS</span>RESOURCES</div>
+        </div>
+        <div class="footer-tagline">One relationship. Multiple solutions. Built to help businesses save, grow, and move smarter.</div>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <a href="https://dreamsfaststart.com">Fast Start</a>
+        <a href="https://dreamsfaststart.com/vf-video-book-summaries.html">Video Library</a>
+        <a href="https://aigeniedatabase.com">AI Genie Database</a>
+      </div>
+      <div class="footer-col">
+        <h4>Ecosystem</h4>
+        <a href="https://dreams.ceo">Dreams.ceo</a>
+        <a href="https://renewalsforlife.com">Renewals For Life</a>
+        <a href="https://dbrlibrary.com">DBR Library</a>
+      </div>
+    </div>
+    <div class="footer-legal">
+      <span class="footer-dbr">DBR</span>
+      © 2026 Dreams Business Resources &nbsp;·&nbsp; Mike Hinsvark, Senior Agency Partner &nbsp;·&nbsp;
+      <a href="mailto:mikeceo@gmail.com">mikeceo@gmail.com</a><br>
+      All rights reserved. Income results vary. This training material is for educational purposes only. One Ecosystem. Endless Opportunities.
+    </div>
+  </footer>
+
+</div><!-- /site-shell -->
+
+<a href="#top" class="to-top" id="toTop" aria-label="Back to top">↑</a>
+
+<script>
+// ── SCROLL REVEAL ──
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('visible'); revealObserver.unobserve(e.target); }
+  });
+}, { threshold: 0.10 });
+document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+// ── COUNTER ANIMATION ──
+const counterObserver = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (!e.isIntersecting) return;
+    const el = e.target, target = parseInt(el.dataset.count, 10);
+    counterObserver.unobserve(el);
+    if (isNaN(target)) return;
+    const dur = 1400, t0 = performance.now();
+    (function tick(t) {
+      const p = Math.min((t - t0) / dur, 1);
+      el.textContent = Math.round(target * (1 - Math.pow(1 - p, 3)));
+      if (p < 1) requestAnimationFrame(tick);
+    })(t0);
+  });
+}, { threshold: 0.5 });
+document.querySelectorAll('[data-count]').forEach(el => counterObserver.observe(el));
+
+// ── BACK TO TOP ──
+const toTop = document.getElementById('toTop');
+window.addEventListener('scroll', () => {
+  toTop.classList.toggle('visible', window.scrollY > 400);
+});
+
+// ── SCROLL NAV DOTS ──
+const sections = ['hero','wedge','language','proof','sequence','scripts','plays','objections','ask','math','compliance','ramp'];
+const dots = document.querySelectorAll('.scroll-dot');
+
+dots.forEach((dot, i) => {
+  dot.addEventListener('click', () => {
+    const target = document.getElementById(dot.dataset.target);
+    if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+});
+
+const sectionObserver = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      const idx = sections.indexOf(e.target.id);
+      if (idx >= 0) {
+        dots.forEach(d => d.classList.remove('active'));
+        dots[idx]?.classList.add('active');
+      }
+    }
+  });
+}, { threshold: 0.3, rootMargin: '-10% 0px -60% 0px' });
+
+sections.forEach(id => {
+  const el = document.getElementById(id);
+  if (el) sectionObserver.observe(el);
+});
+</script>
+</body>
+</html>
