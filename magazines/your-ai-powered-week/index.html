@@ -25,11 +25,48 @@
     .tag { color:var(--accent); font:800 9px 'Space Grotesk'; letter-spacing:.14em; } .card h2 { margin:8px 0 7px; font-family:'Playfair Display',Georgia,serif; font-size:29px; line-height:1.02; letter-spacing:-.03em; } .card p { margin:0; max-width:470px; color:#d4dce0; font-size:13px; } .card-foot { display:flex; justify-content:space-between; align-items:center; margin-top:17px; padding-top:12px; border-top:1px solid #ffffff28; color:#dce6e7; font:700 10px 'Space Grotesk'; letter-spacing:.08em; }
     .reader-hero { padding:46px 54px 30px; display:grid; grid-template-columns:230px 1fr; gap:34px; align-items:center; } .reader-cover { width:100%; border-radius:13px; box-shadow:0 22px 50px #000a; border:1px solid #ffffff25; } .reader-copy h1 { font-size:clamp(35px,5vw,58px); } .reader-copy p { color:var(--muted); max-width:650px; font-size:16px; }
     .buttons { display:flex; flex-wrap:wrap; gap:11px; margin-top:24px; } .btn { display:inline-flex; align-items:center; justify-content:center; min-height:44px; padding:0 18px; border-radius:10px; text-decoration:none; font:800 12px 'Space Grotesk'; letter-spacing:.02em; transition:transform .2s,box-shadow .2s; } .btn:hover { transform:translateY(-2px); } .btn-primary { color:var(--ink); background:linear-gradient(135deg,var(--accent),var(--accent2)); box-shadow:0 0 24px color-mix(in srgb,var(--accent) 32%,transparent); } .btn-ghost { color:var(--accent); border:1px solid color-mix(in srgb,var(--accent) 55%,transparent); background:#ffffff08; }
-    .reader-section { padding:0 54px 66px; } .reader-heading { display:flex; justify-content:space-between; gap:20px; align-items:baseline; border-top:1px solid #ffffff18; padding-top:18px; margin-bottom:14px; } .reader-heading h2 { margin:0; font:800 15px 'Space Grotesk'; letter-spacing:.04em; } .reader-heading span { color:var(--muted); font-size:12px; } .pdf-shell { height:min(84vh,980px); min-height:620px; border:1px solid #ffffff1c; background:#111a20; box-shadow:0 24px 60px #0006; overflow:hidden; border-radius:14px; } .pdf-shell iframe { width:100%; height:100%; border:0; background:#1a2228; }
+    .reader-section { padding:0 54px 66px; } .reader-heading { display:flex; justify-content:space-between; gap:20px; align-items:baseline; border-top:1px solid #ffffff18; padding-top:18px; margin-bottom:14px; } .reader-heading h2 { margin:0; font:800 15px 'Space Grotesk'; letter-spacing:.04em; } .reader-heading span { color:var(--muted); font-size:12px; } .pdf-shell { min-height:620px; padding:18px; border:1px solid #ffffff1c; background:#111a20; box-shadow:0 24px 60px #0006; overflow:hidden; border-radius:14px; } .pdfjs-viewer { display:flex; flex-direction:column; align-items:center; gap:18px; min-height:560px; } .pdf-loading { align-self:stretch; display:flex; align-items:center; justify-content:center; min-height:520px; padding:28px; color:var(--muted); font:700 13px 'Space Grotesk'; letter-spacing:.04em; text-align:center; } .pdf-page { display:flex; justify-content:center; width:100%; } .pdf-page canvas { display:block; max-width:100%; height:auto; background:#fff; box-shadow:0 14px 36px #0008; } .pdf-error { align-self:stretch; margin:auto; max-width:540px; padding:26px; border:1px solid color-mix(in srgb,var(--accent) 45%,transparent); border-radius:14px; background:#ffffff08; color:#dce5e7; text-align:center; } .pdf-error a { display:inline-flex; margin-top:14px; color:var(--accent); font-weight:800; } 
     footer { padding:24px 54px 34px; border-top:1px solid #ffffff18; color:#8d9ca6; font-size:11px; letter-spacing:.06em; }
-    @media(max-width:750px) { nav { padding:0 18px; } .hero,.collection,.reader-section { padding-left:20px; padding-right:20px; } .hero { padding-top:48px; } .grid { grid-template-columns:1fr; } .card { min-height:310px; } .reader-hero { padding:35px 20px 28px; grid-template-columns:1fr; } .reader-cover { width:210px; } .pdf-shell { min-height:480px; height:72vh; } footer { padding-inline:20px; } }
+    @media(max-width:750px) { nav { padding:0 18px; } .hero,.collection,.reader-section { padding-left:20px; padding-right:20px; } .hero { padding-top:48px; } .grid { grid-template-columns:1fr; } .card { min-height:310px; } .reader-hero { padding:35px 20px 28px; grid-template-columns:1fr; } .reader-cover { width:210px; } .pdf-shell { min-height:480px; } footer { padding-inline:20px; } }
   </style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
 </head>
 <body><main class="shell"><nav><a class="brand" href="/">DREAMS <b>BUSINESS RESOURCES</b></a><a class="back" href="../">← Magazine Collection</a></nav>
 <section class="reader-hero"><img class="reader-cover" src="../covers/ai-powered-week-cover.jpg" alt="Your AI-Powered Week cover" /><div class="reader-copy"><div class="eyebrow">AI OPERATING SYSTEM · 7 pages</div><h1>Your AI-Powered Week</h1><div class="accent-line"></div><p>Turn reclaimed hours into a repeatable rhythm that protects revenue-producing work.</p><div class="buttons"><a class="btn btn-primary" href="../pdfs/Your_AI_Powered_Week.pdf" target="_blank" rel="noopener">Read PDF in Full Screen</a><a class="btn btn-ghost" href="../pdfs/Your_AI_Powered_Week.pdf" download="Your_AI_Powered_Week.pdf">Download Magazine</a></div></div></section>
-<section class="reader-section"><div class="reader-heading"><h2>Study Online</h2><span>Use the PDF controls to zoom, search, or save a copy.</span></div><div class="pdf-shell"><iframe title="Your AI-Powered Week online reader" src="../pdfs/Your_AI_Powered_Week.pdf#view=FitH" loading="lazy"></iframe></div></section><footer>© 2026 DREAMS BUSINESS RESOURCES · DBR LIBRARY · YOUR AI-POWERED WEEK</footer></main></body></html>
+<section class="reader-section"><div class="reader-heading"><h2>Study Online</h2><span>Scroll the full magazine below, or use the buttons above to open and save the PDF.</span></div><div class="pdf-shell"><div class="pdfjs-viewer" data-pdf-url="../pdfs/Your_AI_Powered_Week.pdf" aria-label="Your AI-Powered Week online reader"><div class="pdf-loading">Loading the magazine reader…</div></div></div></section><footer>© 2026 DREAMS BUSINESS RESOURCES · DBR LIBRARY · YOUR AI-POWERED WEEK</footer></main><script>
+(function () {
+  const viewer = document.querySelector('.pdfjs-viewer');
+  if (!viewer || !window.pdfjsLib) return;
+  const pdfUrl = viewer.dataset.pdfUrl;
+  const loading = viewer.querySelector('.pdf-loading');
+  pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+  async function renderMagazine() {
+    try {
+      const pdf = await pdfjsLib.getDocument(pdfUrl).promise;
+      loading.textContent = `Loading ${pdf.numPages} pages…`;
+      for (let pageNumber = 1; pageNumber <= pdf.numPages; pageNumber += 1) {
+        const page = await pdf.getPage(pageNumber);
+        const baseViewport = page.getViewport({ scale: 1 });
+        const maxWidth = Math.min(viewer.clientWidth - 16, 760);
+        const scale = Math.max(0.7, Math.min(1.55, maxWidth / baseViewport.width));
+        const viewport = page.getViewport({ scale });
+        const pageWrap = document.createElement('div');
+        pageWrap.className = 'pdf-page';
+        const canvas = document.createElement('canvas');
+        const context = canvas.getContext('2d', { alpha: false });
+        canvas.width = Math.floor(viewport.width);
+        canvas.height = Math.floor(viewport.height);
+        pageWrap.appendChild(canvas);
+        viewer.appendChild(pageWrap);
+        await page.render({ canvasContext: context, viewport }).promise;
+        if (pageNumber === 1) loading.remove();
+      }
+      if (loading.isConnected) loading.remove();
+    } catch (error) {
+      loading.className = 'pdf-error';
+      loading.innerHTML = 'The online reader could not load in this browser. <a href="' + pdfUrl + '" target="_blank" rel="noopener">Open the magazine PDF in a new tab</a>';
+    }
+  }
+  renderMagazine();
+})();
+</script></body></html>
