@@ -17,10 +17,10 @@
     <link rel="stylesheet" crossorigin href="/assets/index-BiLEwP3R.css">
     <script src="/__manus__/debug-collector.js" defer></script>
     <style id="dbr-library-shield-branding">
-      .dbr-library-site-mark { position: absolute; top: 26px; left: max(14px, calc(50% - 556px)); z-index: 1500; display: grid; width: 24px; height: 24px; place-items: center; padding: 0; border: 0; border-radius: 0; background: transparent; box-shadow: none; transition: transform .18s ease, filter .18s ease; }
+      .dbr-library-site-mark { position: fixed; top: 0; left: 0; z-index: 1500; display: grid; width: 24px; height: 24px; place-items: center; padding: 0; border: 0; border-radius: 0; background: transparent; box-shadow: none; opacity: 0; pointer-events: none; transition: transform .18s ease, filter .18s ease, opacity .18s ease; } .dbr-library-site-mark[data-positioned="true"] { opacity: 1; pointer-events: auto; }
       .dbr-library-site-mark:hover, .dbr-library-site-mark:focus-visible { transform: translateY(-1px) scale(1.06); filter: drop-shadow(0 0 8px rgba(18,230,211,.62)); outline: none; }
       .dbr-library-site-mark img { display: block; width: 24px; height: 24px; object-fit: contain; }
-      @media (max-width: 700px) { .dbr-library-site-mark { top: 22px; left: 9px; width: 22px; height: 22px; } .dbr-library-site-mark img { width: 22px; height: 22px; } }
+      @media (max-width: 700px) { .dbr-library-site-mark { width: 22px; height: 22px; } .dbr-library-site-mark img { width: 22px; height: 22px; } }
     </style>
   </head>
 
@@ -92,5 +92,53 @@ Error generating stack: `+l.message+`
       src="https://manus-analytics.com/umami"
       data-website-id="6784b8ec-1fa1-4f00-be89-7e4520a231a1"></script>
   <a href="/aileveragelab/" aria-label="Explore the DBR AI Leverage Lab magazine vault" style="position:fixed;left:50%;bottom:76px;transform:translateX(-50%);z-index:9999;display:inline-flex;align-items:center;justify-content:center;gap:10px;min-width:292px;padding:14px 22px;border:1px solid rgba(196,255,84,.80);border-radius:999px;background:linear-gradient(135deg,rgba(7,23,42,.98),rgba(31,45,82,.98));box-shadow:0 0 36px rgba(177,255,76,.28),0 10px 30px rgba(0,0,0,.42);color:#f5ffe7;text-decoration:none;font:800 12px Inter,Arial,sans-serif;letter-spacing:.07em;backdrop-filter:blur(14px)"><span style="display:block;width:8px;height:8px;border-radius:50%;background:#c4ff54;box-shadow:0 0 12px #c4ff54"></span>EXPLORE AI LEVERAGE LAB&nbsp;→</a><a href="/magazines/" aria-label="Explore the DBR Signature Magazine Collection" style="position:fixed;left:50%;bottom:18px;transform:translateX(-50%);z-index:9999;display:inline-flex;align-items:center;justify-content:center;gap:10px;min-width:278px;padding:14px 22px;border:1px solid rgba(118,245,226,.76);border-radius:999px;background:linear-gradient(135deg,rgba(6,36,52,.97),rgba(19,27,83,.97));box-shadow:0 0 36px rgba(64,231,211,.36),0 10px 30px rgba(0,0,0,.38);color:#ecfffd;text-decoration:none;font:800 12px Inter,Arial,sans-serif;letter-spacing:.07em;backdrop-filter:blur(14px)"><span style="display:block;width:8px;height:8px;border-radius:50%;background:#73f3c0;box-shadow:0 0 12px #73f3c0"></span>EXPLORE 8 NEW MAGAZINES&nbsp;→</a>
-</body>
+    <script id="dbr-library-shield-positioning">
+      (function () {
+        var mark = document.querySelector('.dbr-library-site-mark');
+        if (!mark) return;
+        var pattern = /DBR\s*FAST\s*START/i;
+        function findLabel() {
+          var nodes = Array.prototype.slice.call(document.querySelectorAll('header *, nav *, [role="banner"] *, body *'));
+          return nodes.find(function (node) {
+            if (!node || node === mark || node.closest('.dbr-library-site-mark')) return false;
+            if (node.children && node.children.length) return false;
+            var label = (node.textContent || '').replace(/\s+/g, ' ').trim();
+            var rect = node.getBoundingClientRect();
+            return pattern.test(label) && rect.width > 0 && rect.height > 0 && rect.top < 180;
+          });
+        }
+        function positionMark() {
+          var label = findLabel();
+          if (!label) return false;
+          var rect = label.getBoundingClientRect();
+          var size = window.innerWidth <= 700 ? 22 : 24;
+          var gap = window.innerWidth <= 700 ? 8 : 12;
+          var left = Math.max(8, rect.left - size - gap);
+          var top = Math.max(6, rect.top + (rect.height - size) / 2);
+          mark.style.left = left + 'px';
+          mark.style.top = top + 'px';
+          mark.style.width = size + 'px';
+          mark.style.height = size + 'px';
+          mark.dataset.positioned = 'true';
+          return true;
+        }
+        function start() {
+          if (positionMark()) return;
+          window.setTimeout(positionMark, 250);
+          window.setTimeout(positionMark, 800);
+          window.setTimeout(positionMark, 1600);
+          window.setTimeout(positionMark, 3000);
+        }
+        if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start); else start();
+        if (window.MutationObserver) {
+          var observer = new MutationObserver(function () {
+            if (positionMark()) observer.disconnect();
+          });
+          observer.observe(document.body, { childList: true, subtree: true });
+          window.setTimeout(function () { observer.disconnect(); }, 5000);
+        }
+        window.addEventListener('resize', positionMark, { passive: true });
+      }());
+    </script>
+  </body>
 </html>
